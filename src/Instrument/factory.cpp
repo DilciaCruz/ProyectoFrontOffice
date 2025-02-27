@@ -7,26 +7,18 @@ Factory& Factory::instance() {
     return factory;
 }
 
-void Factory::registerBuilder(const std::string& type, Builder builder) {
-    builders_[type] = builder;
+void Factory::register_constructor(const InstrumentDescription::Type& id, const Builder& builder) {
+    buildersMap_[id] = builder;
 }
 
-std::unique_ptr<Instrument> Factory::create(const std::string& type) const {
-    auto it = builders_.find(type);
-    if (it == builders_.end()) {
-        throw std::runtime_error("Unknown instrument type: " + type);
+std::unique_ptr<Instrument> Factory::operator()(const InstrumentDescription& description) const {
+    auto builder = buildersMap_.find(getBuilderId(description));
+    if (builder == buildersMap_.end()) {
+        throw std::runtime_error("Invalid instrument type in description");
     }
-    return (it->second)(type);
+    return (builder->second)(description);
 }
-#include "factory.hpp"
 
-int main() {
-    try {
-        auto swap = Factory::instance().create("swap");
-        auto bond = Factory::instance().create("bond");
-
-        // Uso de los instrumentos creados
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-    }
+InstrumentDescription::Type Factory::getBuilderId(const InstrumentDescription& description) const {
+    return description.type;
 }

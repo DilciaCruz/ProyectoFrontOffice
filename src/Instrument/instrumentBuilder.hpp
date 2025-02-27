@@ -1,4 +1,4 @@
-
+/*
 #ifndef INSTRUMENT_BUILDER_HPP
 #define INSTRUMENT_BUILDER_HPP
 
@@ -14,4 +14,4 @@ public:
     virtual std::unique_ptr<Instrument> build(const std::string& type) const = 0;
 };
 
-#endif // INSTRUMENT_BUILDER_HPP
+#endif // INSTRUMENT_BUILDER_HPP*/

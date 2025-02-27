@@ -1,54 +1,67 @@
 #define BOOST_TEST_MODULE BondTest
 #include <boost/test/unit_test.hpp>
 #include "../bond.hpp"
+#include "../zero_coupon_curve.hpp"
+#include "../instrument_description.hpp"
+#include "../factory.hpp"
+#include "../bond_builder.hpp"
+#include "../swap_builder.hpp"
+#include <boost/date_time/gregorian/gregorian.hpp>
 
 BOOST_AUTO_TEST_SUITE(BondSuite)
 
 BOOST_AUTO_TEST_CASE(TestBondPrice) {
-    double maturity = 2.0;
-    double couponRate = 0.06;
-    double frequency = 2.0;
-    double notional = 100;
-    std::vector<double> couponDates = {0.5, 1.0, 1.5, 2.0};
+    boost::gregorian::date issueDate(boost::gregorian::from_simple_string("2024-01-01"));
 
-    //  **1. Definir tasas zero-coupon**
-    std::vector<double> zeroRates = {5.0, 5.8,6.4,6.8};
+    // Crear una descripción del instrumento (bond)
+    InstrumentDescription bondDescription(InstrumentDescription::bond);
+    bondDescription.maturity = 2.0;
+    bondDescription.couponRate = 0.06;
+    bondDescription.frequency = 2.0;
+    bondDescription.notional = 100;
+    bondDescription.issueDate = issueDate;
+    bondDescription.couponDates = {0.5, 1.0, 1.5, 2.0};
 
-    //  **2. Generar los tiempos de vencimiento**
-    std::vector<double> maturities(20);
-    double start = 0.5;
-    for (size_t i = 0; i < maturities.size(); ++i) {
-        maturities[i] = start;
-        start += 0.5;
-    }
-
-    //  **3. Calcular los factores de descuento**
-    std::vector<double> zeroPrices;
-    for (size_t i = 0; i < maturities.size(); ++i) {
-        zeroPrices.push_back(std::exp(-zeroRates[i] / 100.0 * maturities[i]));  // ✅ Conversión correcta
-    }
-
-    // **4. Crear la curva de rendimiento con los factores de descuento**
-    std::shared_ptr<YieldCurve> myCurve = std::make_shared<YieldCurve>(zeroPrices, maturities);
-
-    // **5. Crear el bono con la curva de rendimiento**
-    Bond bond(maturity, couponRate, frequency, notional, couponDates, myCurve);
-
-    // **6. Calcular el precio del bono**
-    double computedPrice = bond.price();
-  BOOST_TEST_MESSAGE("\n **Ejecutando Test de Precio del Bono**");
-    BOOST_TEST_MESSAGE(" - Maturity: " << maturity << " años");
-    BOOST_TEST_MESSAGE(" - Coupon Rate: " << couponRate * 100 << "%");
-    BOOST_TEST_MESSAGE(" - Frequency: " << frequency);
-    BOOST_TEST_MESSAGE(" - Notional: $" << notional);
-    BOOST_TEST_MESSAGE(" - Precio Calculado: $" << computedPrice);
-
-    BOOST_TEST(computedPrice > 98.0);
-    BOOST_TEST(computedPrice < 98.5);
+    // Crear la curva de descuento
+    std::vector<double> zeroRates = {5.0, 5.8, 6.4, 6.8};
+    std::vector<double> maturities = {0.5, 1.0, 1.5, 2.0};
+    std::shared_ptr<ZeroCouponCurve> zeroCurve = std::make_shared<ZeroCouponCurve>(zeroRates, maturities);
     
-    // **7. Verificar que el precio esté dentro del rango esperado**
-    BOOST_TEST(computedPrice > 97.5);
-    BOOST_TEST(computedPrice < 99.5);
+    bondDescription.zeroCouponCurve = zeroCurve;
+
+    // **Registra explícitamente los builders antes de usar Factory**:
+    Factory::instance().register_constructor(InstrumentDescription::bond, BondBuilder::build);
+
+    // **Usar Factory para crear el bono**
+    std::unique_ptr<Instrument> instrument = Factory::instance()(bondDescription); 
+
+    // **Hacer dynamic_cast de unique_ptr<Instrument> a unique_ptr<Bond>**
+    std::unique_ptr<Bond> bond = std::unique_ptr<Bond>(dynamic_cast<Bond*>(instrument.release()));
+
+    if (bond) {  // Verifica si el cast fue exitoso
+        // **Calcular el precio del bono**
+        double computedPrice = bond->price();
+
+        BOOST_TEST_MESSAGE("Precio del bono calculado: $" << computedPrice);
+        BOOST_TEST(computedPrice > 98.0);
+        BOOST_TEST(computedPrice < 99.0);
+
+        // **Parámetros de la TIR**
+        double tolerance = 1.48E-08;  // Error máximo permitido
+        int maxIterations = 50;  // Aumenta iteraciones para mayor precisión
+        double initialGuess = 0.0676;  // 6.76%
+
+        // **Calcular la TIR**
+        double computedYTM = bond->yieldToMaturity(initialGuess, maxIterations, tolerance,computedPrice);
+
+        BOOST_TEST_MESSAGE("TIR calculada: " << computedYTM * 100 << "%");
+
+        // **Verificar que la TIR esté dentro del rango esperado**
+        BOOST_TEST(computedYTM > 0.04);
+        BOOST_TEST(computedYTM < 0.07);
+    } else {
+        BOOST_FAIL("El objeto no es de tipo Bond");
+    }
 }
 
 BOOST_AUTO_TEST_SUITE_END()

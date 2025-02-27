@@ -1,12 +1,13 @@
 #ifndef BOND_BUILDER_HPP
 #define BOND_BUILDER_HPP
 
-#include "instrumentBuilder.hpp"
 #include "bond.hpp"
+#include "instrument_description.hpp"
 
-class BondBuilder : public InstrumentBuilder {
+class BondBuilder {
 public:
-    std::unique_ptr<Instrument> build(const std::string& type) const override;
+    static std::unique_ptr<Instrument> build(const InstrumentDescription& description);
+    static InstrumentDescription::Type getId();
 };
 
 #endif // BOND_BUILDER_HPP

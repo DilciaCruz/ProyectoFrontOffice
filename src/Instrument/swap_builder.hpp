@@ -1,12 +1,13 @@
 /*#ifndef SWAP_BUILDER_HPP
 #define SWAP_BUILDER_HPP
 
-#include "instrumentBuilder.hpp"
 #include "swap.hpp"
+#include "instrument_description.hpp"
 
-class SwapBuilder : public InstrumentBuilder {
+class SwapBuilder {
 public:
-    std::unique_ptr<Instrument> build(const std::string& type) const override;  // Ahora coincide con la base
+    static std::unique_ptr<Instrument> build(const InstrumentDescription& description);
+    static InstrumentDescription::Type getId();
 };
 
 #endif // SWAP_BUILDER_HPP*/

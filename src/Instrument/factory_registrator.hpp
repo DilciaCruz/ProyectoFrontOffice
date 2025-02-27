@@ -9,6 +9,4 @@ public:
     FactoryRegistrator();
 };
 
-#include "factory_registrator.hpp" // Incluir la implementación
-
 #endif // FACTORY_REGISTRATOR_HPP
