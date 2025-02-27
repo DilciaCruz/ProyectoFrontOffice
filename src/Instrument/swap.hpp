@@ -1,12 +1,14 @@
-#ifndef SWAP_HPP
+/*#ifndef SWAP_HPP
 #define SWAP_HPP
 
 #include <vector>
 #include <cmath>
 #include <memory>
+#include "instrument.hpp"  // Asegurar que la clase base está incluida
 
 class Swap: public Instrument {
 public:
+    Swap() = default;  // Prohíbe la creación sin parámetros
     Swap(double notional, double fixedRate, const std::vector<double>& zeroRates, 
          const std::vector<double>& maturities, double frequency);
 
@@ -25,3 +27,4 @@ private:
 };
 
 #endif // SWAP_HPP
+*/

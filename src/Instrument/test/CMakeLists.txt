@@ -1,12 +1,13 @@
-# Habilitar pruebas
-enable_testing()
+include(${CMAKE_SOURCE_DIR}/cmake-lib/CMakeBoostTest.cmake)
 
-# Crear ejecutable para la prueba de la fábrica
-add_executable(FactoryTest test_factory.cpp)
-target_link_libraries(FactoryTest Instrument ${Boost_LIBRARIES})
-add_test(NAME FactoryTest COMMAND FactoryTest)
+# Buscar Boost
+find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
-# Crear ejecutable para la prueba del cálculo de días
-add_executable(DayCountTest test_day_count.cpp)
-target_link_libraries(DayCountTest Instrument ${Boost_LIBRARIES})
-add_test(NAME DayCountTest COMMAND DayCountTest)
+if(Boost_FOUND)
+    message("--> Boost encontrado en: ${Boost_INCLUDE_DIRS}")
+else()
+    message(FATAL_ERROR "Boost no encontrado. Instálalo y verifica las rutas.")
+endif()
+
+# Crear la prueba usando la función `boost_test_project`
+boost_test_project(NAME test_bond DEPS Instrument)

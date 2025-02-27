@@ -1,4 +1,4 @@
-#ifndef SWAP_BUILDER_HPP
+/*#ifndef SWAP_BUILDER_HPP
 #define SWAP_BUILDER_HPP
 
 #include "instrumentBuilder.hpp"
@@ -9,4 +9,4 @@ public:
     std::unique_ptr<Instrument> build(const std::string& type) const override;  // Ahora coincide con la base
 };
 
-#endif // SWAP_BUILDER_HPP
+#endif // SWAP_BUILDER_HPP*/
