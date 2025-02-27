@@ -49,7 +49,7 @@ BOOST_AUTO_TEST_CASE(TestBondPrice) {
         // **Parámetros de la TIR**
         double tolerance = 1.48E-08;  // Error máximo permitido
         int maxIterations = 50;  // Aumenta iteraciones para mayor precisión
-        double initialGuess = 0.0676;  // 6.76%
+        double initialGuess = 0.08;  // 6.76%
 
         // **Calcular la TIR**
         double computedYTM = bond->yieldToMaturity(initialGuess, maxIterations, tolerance,computedPrice);

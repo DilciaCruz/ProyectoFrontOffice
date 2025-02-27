@@ -15,7 +15,7 @@ public:
          const std::shared_ptr<ZeroCouponCurve>& curve);  
 
     double price() const;
-    double yieldToMaturity(double initialGuess, int maxIterations, double tolerance, double price) const;  
+    double yieldToMaturity(double initialGuess, int maxIterations, double tolerance, double priceBond) const;  
 
 private:
     boost::gregorian::date issueDate;  

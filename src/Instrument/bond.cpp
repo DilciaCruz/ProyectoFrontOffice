@@ -46,12 +46,12 @@ double Bond::price() const{
         double finalAccrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, maturityDate)) / 360.0;
         double finalDiscount = zeroCouponCurve->getDiscountFactor(finalAccrualFraction);
         price += notional * finalDiscount;
-        std::cout << std::setw(35) << std::setprecision(5) << finalDiscount << " |" << std::setw(16) << std::setprecision(2) << price << "\n";
+        std::cout << std::setw(35) << std::setprecision(5) << finalDiscount << " |" << std::setw(16) << std::setprecision(4) << price << "\n";
         std::cout << std::string(65, '-') << "\n";
         return price;
     }
 double Bond::yieldToMaturity(double initialGuess, int maxIterations, double tolerance, double priceBond) const {
-    double estimatedYTM = initialGuess;  // Suposición inicial de la TIR
+    double estimatedYTM = initialGuess;  
 
     std::cout << "\nIniciando Newton-Raphson para calcular la TIR...\n";
     std::cout << "Precio del bono: " << std::setprecision(10) << priceBond << "\n";
@@ -60,19 +60,11 @@ double Bond::yieldToMaturity(double initialGuess, int maxIterations, double tole
     std::cout << "Tolerancia de error: " << std::scientific << tolerance << "\n\n";
 
     for (int iteration = 0; iteration < maxIterations; ++iteration) {
-        double functionValue = 0.0;  // Representa f(YTM)
-        double derivativeValue = 0.0; // Representa f'(YTM)
+        double functionValue = 0.0;  
+        double derivativeValue = 0.0; 
 
-        double coupon = (couponRate / frequency) * notional;  // Pago del cupón por período
-        int totalPayments = static_cast<int>(maturity * frequency);  // Total de pagos en la vida del bono
-
-        // Definir el factor de descuento base
-        double discountFactorBase = 1.0 + estimatedYTM / frequency;
-
-        if (discountFactorBase <= 0) {
-            std::cerr << "Error: División por cero en Newton-Raphson." << std::endl;
-            return estimatedYTM;
-        }
+        double coupon = (couponRate / frequency) * notional;  
+        int totalPayments = static_cast<int>(maturity * frequency);  
 
         // Calculador de fracción de año
         Actual_360 calculator;
@@ -81,23 +73,26 @@ double Bond::yieldToMaturity(double initialGuess, int maxIterations, double tole
             boost::gregorian::date payment_date = issueDate + boost::gregorian::days(static_cast<int>(period * (360.0 / frequency)));
             double accrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, payment_date)) / 360.0;
 
-            double discountFactor = std::pow(discountFactorBase, -accrualFraction);  // Se usa signo negativo aquí
+            // Calcular el factor de descuento manualmente
+            double discountFactor = 1.0 / pow(1.0 + estimatedYTM / frequency, accrualFraction * frequency);
+            
             functionValue += coupon * discountFactor;
-            derivativeValue += -accrualFraction * coupon * discountFactor / discountFactorBase;
+            derivativeValue += -accrualFraction * coupon * discountFactor / (1.0 + estimatedYTM / frequency);
         }
 
         // Agregar el valor nominal descontado
         double finalAccrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, issueDate + boost::gregorian::days(static_cast<int>(maturity * 360)))) / 360.0;
-        double finalDiscountFactor = std::pow(discountFactorBase, -finalAccrualFraction);
+        double finalDiscountFactor = 1.0 / pow(1.0 + estimatedYTM / frequency, finalAccrualFraction * frequency);
+        
         functionValue += notional * finalDiscountFactor;
-        derivativeValue += -finalAccrualFraction * notional * finalDiscountFactor / discountFactorBase;
+        derivativeValue += -finalAccrualFraction * notional * finalDiscountFactor / (1.0 + estimatedYTM / frequency);
 
         // Evaluar la diferencia con el precio de mercado
         functionValue -= priceBond;
 
         if (std::fabs(derivativeValue) < 1e-10) {
-            std::cerr << "Error: Derivada demasiado pequeña en Newton-Raphson." << std::endl;
-            return estimatedYTM;
+            std::cerr << "Error: Derivada demasiado pequeña en Newton-Raphson. Ajustando derivada...\n";
+            derivativeValue = (derivativeValue < 0) ? -1e-10 : 1e-10;
         }
 
         // Aplicamos Newton-Raphson
