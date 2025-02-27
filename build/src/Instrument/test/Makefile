@@ -212,6 +212,30 @@ test_factory.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.s
 .PHONY : test_factory.cpp.s
 
+test_tir.o: test_tir.cpp.o
+.PHONY : test_tir.o
+
+# target to build an object file
+test_tir.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.o
+.PHONY : test_tir.cpp.o
+
+test_tir.i: test_tir.cpp.i
+.PHONY : test_tir.i
+
+# target to preprocess a source file
+test_tir.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.i
+.PHONY : test_tir.cpp.i
+
+test_tir.s: test_tir.cpp.s
+.PHONY : test_tir.s
+
+# target to generate assembly for a file
+test_tir.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.s
+.PHONY : test_tir.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -231,6 +255,9 @@ help:
 	@echo "... test_factory.o"
 	@echo "... test_factory.i"
 	@echo "... test_factory.s"
+	@echo "... test_tir.o"
+	@echo "... test_tir.i"
+	@echo "... test_tir.s"
 .PHONY : help
 
 

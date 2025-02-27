@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Instrument.dir/thirty_360.cpp.o.d"
   "CMakeFiles/Instrument.dir/yield_curve.cpp.o"
   "CMakeFiles/Instrument.dir/yield_curve.cpp.o.d"
+  "CMakeFiles/Instrument.dir/zero_coupon_curve.cpp.o"
+  "CMakeFiles/Instrument.dir/zero_coupon_curve.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
