@@ -20,6 +20,8 @@ Boost_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/include
 
+Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE:STRING=/usr/lib/aarch64-linux-gnu/libboost_unit_test_framework.a
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -215,6 +217,9 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for the target
+Instrument_LIB_DEPENDS:STATIC=general;Boost::unit_test_framework;
+
 //Value Computed by CMake
 ProyectoFrontOffice_BINARY_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build
 
@@ -226,6 +231,18 @@ ProyectoFrontOffice_SOURCE_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/Proyec
 
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0
+
+//The directory containing a CMake configuration file for boost_unit_test_framework.
+boost_unit_test_framework_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/boost_unit_test_framework-1.74.0
+
+//Value Computed by CMake
+test_bond_BINARY_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument/test
+
+//Value Computed by CMake
+test_bond_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+test_bond_SOURCE_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test
 
 
 ########################
@@ -378,7 +395,9 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][c ][v1.74.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: unit_test_framework ][v1.74.0()]
 //ADVANCED property for variable: boost_headers_DIR
 boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_unit_test_framework_DIR
+boost_unit_test_framework_DIR-ADVANCED:INTERNAL=1
 

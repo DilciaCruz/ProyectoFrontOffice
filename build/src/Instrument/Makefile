@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/Proye
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -274,30 +284,6 @@ factory_registrator.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/factory_registrator.cpp.s
 .PHONY : factory_registrator.cpp.s
 
-instrument.o: instrument.cpp.o
-.PHONY : instrument.o
-
-# target to build an object file
-instrument.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o
-.PHONY : instrument.cpp.o
-
-instrument.i: instrument.cpp.i
-.PHONY : instrument.i
-
-# target to preprocess a source file
-instrument.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.i
-.PHONY : instrument.cpp.i
-
-instrument.s: instrument.cpp.s
-.PHONY : instrument.s
-
-# target to generate assembly for a file
-instrument.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.s
-.PHONY : instrument.cpp.s
-
 instrument_description.o: instrument_description.cpp.o
 .PHONY : instrument_description.o
 
@@ -394,6 +380,30 @@ thirty_360.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.s
 .PHONY : thirty_360.cpp.s
 
+yield_curve.o: yield_curve.cpp.o
+.PHONY : yield_curve.o
+
+# target to build an object file
+yield_curve.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o
+.PHONY : yield_curve.cpp.o
+
+yield_curve.i: yield_curve.cpp.i
+.PHONY : yield_curve.i
+
+# target to preprocess a source file
+yield_curve.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.i
+.PHONY : yield_curve.cpp.i
+
+yield_curve.s: yield_curve.cpp.s
+.PHONY : yield_curve.s
+
+# target to generate assembly for a file
+yield_curve.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/CMakeFiles/Instrument.dir/build.make src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.s
+.PHONY : yield_curve.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +412,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... Instrument"
 	@echo "... actual_360.o"
 	@echo "... actual_360.i"
@@ -421,9 +432,6 @@ help:
 	@echo "... factory_registrator.o"
 	@echo "... factory_registrator.i"
 	@echo "... factory_registrator.s"
-	@echo "... instrument.o"
-	@echo "... instrument.i"
-	@echo "... instrument.s"
 	@echo "... instrument_description.o"
 	@echo "... instrument_description.i"
 	@echo "... instrument_description.s"
@@ -436,6 +444,9 @@ help:
 	@echo "... thirty_360.o"
 	@echo "... thirty_360.i"
 	@echo "... thirty_360.s"
+	@echo "... yield_curve.o"
+	@echo "... yield_curve.i"
+	@echo "... yield_curve.s"
 .PHONY : help
 
 

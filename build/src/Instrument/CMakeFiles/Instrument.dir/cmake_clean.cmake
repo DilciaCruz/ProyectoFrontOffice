@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../libInstrument.a"
   "../../libInstrument.pdb"
+  "../../libInstrument.so"
   "CMakeFiles/Instrument.dir/actual_360.cpp.o"
   "CMakeFiles/Instrument.dir/actual_360.cpp.o.d"
   "CMakeFiles/Instrument.dir/bond.cpp.o"
@@ -13,8 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Instrument.dir/factory.cpp.o.d"
   "CMakeFiles/Instrument.dir/factory_registrator.cpp.o"
   "CMakeFiles/Instrument.dir/factory_registrator.cpp.o.d"
-  "CMakeFiles/Instrument.dir/instrument.cpp.o"
-  "CMakeFiles/Instrument.dir/instrument.cpp.o.d"
   "CMakeFiles/Instrument.dir/instrument_description.cpp.o"
   "CMakeFiles/Instrument.dir/instrument_description.cpp.o.d"
   "CMakeFiles/Instrument.dir/swap.cpp.o"
@@ -23,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Instrument.dir/swap_builder.cpp.o.d"
   "CMakeFiles/Instrument.dir/thirty_360.cpp.o"
   "CMakeFiles/Instrument.dir/thirty_360.cpp.o.d"
+  "CMakeFiles/Instrument.dir/yield_curve.cpp.o"
+  "CMakeFiles/Instrument.dir/yield_curve.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

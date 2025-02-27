@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/Proye
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -130,30 +140,17 @@ Instrument/fast:
 .PHONY : Instrument/fast
 
 #=============================================================================
-# Target rules for targets named FactoryTest
+# Target rules for targets named test_bond
 
 # Build rule for target.
-FactoryTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FactoryTest
-.PHONY : FactoryTest
+test_bond: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_bond
+.PHONY : test_bond
 
 # fast build rule for target.
-FactoryTest/fast:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/FactoryTest.dir/build.make src/Instrument/test/CMakeFiles/FactoryTest.dir/build
-.PHONY : FactoryTest/fast
-
-#=============================================================================
-# Target rules for targets named DayCountTest
-
-# Build rule for target.
-DayCountTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DayCountTest
-.PHONY : DayCountTest
-
-# fast build rule for target.
-DayCountTest/fast:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/DayCountTest.dir/build.make src/Instrument/test/CMakeFiles/DayCountTest.dir/build
-.PHONY : DayCountTest/fast
+test_bond/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/build
+.PHONY : test_bond/fast
 
 # Help Target
 help:
@@ -163,9 +160,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DayCountTest"
-	@echo "... FactoryTest"
+	@echo "... test"
 	@echo "... Instrument"
+	@echo "... test_bond"
 .PHONY : help
 
 

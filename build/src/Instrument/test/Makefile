@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/Proye
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -117,39 +127,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/Instrument/test/CMakeFiles/FactoryTest.dir/rule:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/FactoryTest.dir/rule
-.PHONY : src/Instrument/test/CMakeFiles/FactoryTest.dir/rule
+src/Instrument/test/CMakeFiles/test_bond.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_bond.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_bond.dir/rule
 
 # Convenience name for target.
-FactoryTest: src/Instrument/test/CMakeFiles/FactoryTest.dir/rule
-.PHONY : FactoryTest
+test_bond: src/Instrument/test/CMakeFiles/test_bond.dir/rule
+.PHONY : test_bond
 
 # fast build rule for target.
-FactoryTest/fast:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/FactoryTest.dir/build.make src/Instrument/test/CMakeFiles/FactoryTest.dir/build
-.PHONY : FactoryTest/fast
+test_bond/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/build
+.PHONY : test_bond/fast
 
-# Convenience name for target.
-src/Instrument/test/CMakeFiles/DayCountTest.dir/rule:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/DayCountTest.dir/rule
-.PHONY : src/Instrument/test/CMakeFiles/DayCountTest.dir/rule
+test_bond.o: test_bond.cpp.o
+.PHONY : test_bond.o
 
-# Convenience name for target.
-DayCountTest: src/Instrument/test/CMakeFiles/DayCountTest.dir/rule
-.PHONY : DayCountTest
+# target to build an object file
+test_bond.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.o
+.PHONY : test_bond.cpp.o
 
-# fast build rule for target.
-DayCountTest/fast:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/DayCountTest.dir/build.make src/Instrument/test/CMakeFiles/DayCountTest.dir/build
-.PHONY : DayCountTest/fast
+test_bond.i: test_bond.cpp.i
+.PHONY : test_bond.i
+
+# target to preprocess a source file
+test_bond.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.i
+.PHONY : test_bond.cpp.i
+
+test_bond.s: test_bond.cpp.s
+.PHONY : test_bond.s
+
+# target to generate assembly for a file
+test_bond.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.s
+.PHONY : test_bond.cpp.s
 
 test_day_count.o: test_day_count.cpp.o
 .PHONY : test_day_count.o
 
 # target to build an object file
 test_day_count.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/DayCountTest.dir/build.make src/Instrument/test/CMakeFiles/DayCountTest.dir/test_day_count.cpp.o
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.o
 .PHONY : test_day_count.cpp.o
 
 test_day_count.i: test_day_count.cpp.i
@@ -157,7 +177,7 @@ test_day_count.i: test_day_count.cpp.i
 
 # target to preprocess a source file
 test_day_count.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/DayCountTest.dir/build.make src/Instrument/test/CMakeFiles/DayCountTest.dir/test_day_count.cpp.i
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.i
 .PHONY : test_day_count.cpp.i
 
 test_day_count.s: test_day_count.cpp.s
@@ -165,7 +185,7 @@ test_day_count.s: test_day_count.cpp.s
 
 # target to generate assembly for a file
 test_day_count.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/DayCountTest.dir/build.make src/Instrument/test/CMakeFiles/DayCountTest.dir/test_day_count.cpp.s
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.s
 .PHONY : test_day_count.cpp.s
 
 test_factory.o: test_factory.cpp.o
@@ -173,7 +193,7 @@ test_factory.o: test_factory.cpp.o
 
 # target to build an object file
 test_factory.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/FactoryTest.dir/build.make src/Instrument/test/CMakeFiles/FactoryTest.dir/test_factory.cpp.o
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.o
 .PHONY : test_factory.cpp.o
 
 test_factory.i: test_factory.cpp.i
@@ -181,7 +201,7 @@ test_factory.i: test_factory.cpp.i
 
 # target to preprocess a source file
 test_factory.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/FactoryTest.dir/build.make src/Instrument/test/CMakeFiles/FactoryTest.dir/test_factory.cpp.i
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.i
 .PHONY : test_factory.cpp.i
 
 test_factory.s: test_factory.cpp.s
@@ -189,7 +209,7 @@ test_factory.s: test_factory.cpp.s
 
 # target to generate assembly for a file
 test_factory.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/FactoryTest.dir/build.make src/Instrument/test/CMakeFiles/FactoryTest.dir/test_factory.cpp.s
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.s
 .PHONY : test_factory.cpp.s
 
 # Help Target
@@ -200,8 +220,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DayCountTest"
-	@echo "... FactoryTest"
+	@echo "... test"
+	@echo "... test_bond"
+	@echo "... test_bond.o"
+	@echo "... test_bond.i"
+	@echo "... test_bond.s"
 	@echo "... test_day_count.o"
 	@echo "... test_day_count.i"
 	@echo "... test_day_count.s"

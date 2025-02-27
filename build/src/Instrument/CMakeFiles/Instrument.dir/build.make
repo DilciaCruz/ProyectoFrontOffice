@@ -69,19 +69,19 @@ include src/Instrument/CMakeFiles/Instrument.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/Instrument/CMakeFiles/Instrument.dir/flags.make
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o: ../src/Instrument/instrument.cpp
-src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o -MF CMakeFiles/Instrument.dir/instrument.cpp.o.d -o CMakeFiles/Instrument.dir/instrument.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument.cpp
+src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: ../src/Instrument/actual_360.cpp
+src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o -MF CMakeFiles/Instrument.dir/actual_360.cpp.o.d -o CMakeFiles/Instrument.dir/actual_360.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/instrument.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument.cpp > CMakeFiles/Instrument.dir/instrument.cpp.i
+src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/actual_360.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp > CMakeFiles/Instrument.dir/actual_360.cpp.i
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/instrument.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument.cpp -o CMakeFiles/Instrument.dir/instrument.cpp.s
+src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/actual_360.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp -o CMakeFiles/Instrument.dir/actual_360.cpp.s
 
 src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
 src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.o: ../src/Instrument/bond.cpp
@@ -97,33 +97,33 @@ src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/bond.cpp.s"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond.cpp -o CMakeFiles/Instrument.dir/bond.cpp.s
 
-src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: ../src/Instrument/swap.cpp
-src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o -MF CMakeFiles/Instrument.dir/swap.cpp.o.d -o CMakeFiles/Instrument.dir/swap.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp
+src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: ../src/Instrument/bond_builder.cpp
+src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o -MF CMakeFiles/Instrument.dir/bond_builder.cpp.o.d -o CMakeFiles/Instrument.dir/bond_builder.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp
 
-src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/swap.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp > CMakeFiles/Instrument.dir/swap.cpp.i
+src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/bond_builder.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp > CMakeFiles/Instrument.dir/bond_builder.cpp.i
 
-src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/swap.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp -o CMakeFiles/Instrument.dir/swap.cpp.s
+src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/bond_builder.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp -o CMakeFiles/Instrument.dir/bond_builder.cpp.s
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: ../src/Instrument/instrument_description.cpp
-src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o -MF CMakeFiles/Instrument.dir/instrument_description.cpp.o.d -o CMakeFiles/Instrument.dir/instrument_description.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp
+src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: ../src/Instrument/day_count_calculator.cpp
+src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o -MF CMakeFiles/Instrument.dir/day_count_calculator.cpp.o.d -o CMakeFiles/Instrument.dir/day_count_calculator.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/instrument_description.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp > CMakeFiles/Instrument.dir/instrument_description.cpp.i
+src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/day_count_calculator.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp > CMakeFiles/Instrument.dir/day_count_calculator.cpp.i
 
-src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/instrument_description.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp -o CMakeFiles/Instrument.dir/instrument_description.cpp.s
+src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/day_count_calculator.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp -o CMakeFiles/Instrument.dir/day_count_calculator.cpp.s
 
 src/Instrument/CMakeFiles/Instrument.dir/factory.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
 src/Instrument/CMakeFiles/Instrument.dir/factory.cpp.o: ../src/Instrument/factory.cpp
@@ -153,24 +153,38 @@ src/Instrument/CMakeFiles/Instrument.dir/factory_registrator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/factory_registrator.cpp.s"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/factory_registrator.cpp -o CMakeFiles/Instrument.dir/factory_registrator.cpp.s
 
-src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: ../src/Instrument/bond_builder.cpp
-src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o -MF CMakeFiles/Instrument.dir/bond_builder.cpp.o.d -o CMakeFiles/Instrument.dir/bond_builder.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp
+src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: ../src/Instrument/instrument_description.cpp
+src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o -MF CMakeFiles/Instrument.dir/instrument_description.cpp.o.d -o CMakeFiles/Instrument.dir/instrument_description.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp
 
-src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/bond_builder.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp > CMakeFiles/Instrument.dir/bond_builder.cpp.i
+src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/instrument_description.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp > CMakeFiles/Instrument.dir/instrument_description.cpp.i
 
-src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/bond_builder.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/bond_builder.cpp -o CMakeFiles/Instrument.dir/bond_builder.cpp.s
+src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/instrument_description.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.cpp -o CMakeFiles/Instrument.dir/instrument_description.cpp.s
+
+src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: ../src/Instrument/swap.cpp
+src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o -MF CMakeFiles/Instrument.dir/swap.cpp.o.d -o CMakeFiles/Instrument.dir/swap.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp
+
+src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/swap.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp > CMakeFiles/Instrument.dir/swap.cpp.i
+
+src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/swap.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap.cpp -o CMakeFiles/Instrument.dir/swap.cpp.s
 
 src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
 src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o: ../src/Instrument/swap_builder.cpp
 src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o -MF CMakeFiles/Instrument.dir/swap_builder.cpp.o.d -o CMakeFiles/Instrument.dir/swap_builder.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap_builder.cpp
 
 src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.i: cmake_force
@@ -180,20 +194,6 @@ src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.i: cmake_force
 src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/swap_builder.cpp.s"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/swap_builder.cpp -o CMakeFiles/Instrument.dir/swap_builder.cpp.s
-
-src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: ../src/Instrument/day_count_calculator.cpp
-src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o -MF CMakeFiles/Instrument.dir/day_count_calculator.cpp.o.d -o CMakeFiles/Instrument.dir/day_count_calculator.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp
-
-src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/day_count_calculator.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp > CMakeFiles/Instrument.dir/day_count_calculator.cpp.i
-
-src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/day_count_calculator.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.cpp -o CMakeFiles/Instrument.dir/day_count_calculator.cpp.s
 
 src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
 src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.o: ../src/Instrument/thirty_360.cpp
@@ -209,56 +209,56 @@ src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/thirty_360.cpp.s"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/thirty_360.cpp -o CMakeFiles/Instrument.dir/thirty_360.cpp.s
 
-src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
-src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: ../src/Instrument/actual_360.cpp
-src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o -MF CMakeFiles/Instrument.dir/actual_360.cpp.o.d -o CMakeFiles/Instrument.dir/actual_360.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp
+src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/flags.make
+src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o: ../src/Instrument/yield_curve.cpp
+src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o: src/Instrument/CMakeFiles/Instrument.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o -MF CMakeFiles/Instrument.dir/yield_curve.cpp.o.d -o CMakeFiles/Instrument.dir/yield_curve.cpp.o -c /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/yield_curve.cpp
 
-src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/actual_360.cpp.i"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp > CMakeFiles/Instrument.dir/actual_360.cpp.i
+src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Instrument.dir/yield_curve.cpp.i"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/yield_curve.cpp > CMakeFiles/Instrument.dir/yield_curve.cpp.i
 
-src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/actual_360.cpp.s"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.cpp -o CMakeFiles/Instrument.dir/actual_360.cpp.s
+src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Instrument.dir/yield_curve.cpp.s"
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/yield_curve.cpp -o CMakeFiles/Instrument.dir/yield_curve.cpp.s
 
 # Object files for target Instrument
 Instrument_OBJECTS = \
-"CMakeFiles/Instrument.dir/instrument.cpp.o" \
+"CMakeFiles/Instrument.dir/actual_360.cpp.o" \
 "CMakeFiles/Instrument.dir/bond.cpp.o" \
-"CMakeFiles/Instrument.dir/swap.cpp.o" \
-"CMakeFiles/Instrument.dir/instrument_description.cpp.o" \
+"CMakeFiles/Instrument.dir/bond_builder.cpp.o" \
+"CMakeFiles/Instrument.dir/day_count_calculator.cpp.o" \
 "CMakeFiles/Instrument.dir/factory.cpp.o" \
 "CMakeFiles/Instrument.dir/factory_registrator.cpp.o" \
-"CMakeFiles/Instrument.dir/bond_builder.cpp.o" \
+"CMakeFiles/Instrument.dir/instrument_description.cpp.o" \
+"CMakeFiles/Instrument.dir/swap.cpp.o" \
 "CMakeFiles/Instrument.dir/swap_builder.cpp.o" \
-"CMakeFiles/Instrument.dir/day_count_calculator.cpp.o" \
 "CMakeFiles/Instrument.dir/thirty_360.cpp.o" \
-"CMakeFiles/Instrument.dir/actual_360.cpp.o"
+"CMakeFiles/Instrument.dir/yield_curve.cpp.o"
 
 # External object files for target Instrument
 Instrument_EXTERNAL_OBJECTS =
 
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/instrument.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/factory.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/factory_registrator.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/build.make
-libInstrument.a: src/Instrument/CMakeFiles/Instrument.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library ../../libInstrument.a"
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && $(CMAKE_COMMAND) -P CMakeFiles/Instrument.dir/cmake_clean_target.cmake
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/actual_360.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/bond_builder.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/day_count_calculator.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/factory.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/factory_registrator.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/instrument_description.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/swap.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/swap_builder.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/thirty_360.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/yield_curve.cpp.o
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/build.make
+libInstrument.so: /usr/lib/aarch64-linux-gnu/libboost_unit_test_framework.a
+libInstrument.so: src/Instrument/CMakeFiles/Instrument.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ../../libInstrument.so"
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Instrument.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-src/Instrument/CMakeFiles/Instrument.dir/build: libInstrument.a
+src/Instrument/CMakeFiles/Instrument.dir/build: libInstrument.so
 .PHONY : src/Instrument/CMakeFiles/Instrument.dir/build
 
 src/Instrument/CMakeFiles/Instrument.dir/clean:

@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/DayCountTest.dir/test_day_count.cpp.o -o ../../../DayCountTest  ../../../libInstrument.a 
