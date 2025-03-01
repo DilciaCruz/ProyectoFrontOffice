@@ -6,11 +6,11 @@
 #include "actual_360.hpp"
 #include <boost/date_time/gregorian/gregorian.hpp>
 
-Bond::Bond(boost::gregorian::date issueDate, double maturity, double couponRate, 
-           double frequency, double notional, const std::vector<double>& couponDates, 
-           const std::shared_ptr<ZeroCouponCurve>& curve)
-    : issueDate(issueDate), maturity(maturity), couponRate(couponRate), 
-      frequency(frequency), notional(notional), couponDates(couponDates), zeroCouponCurve(curve) {}
+
+      Bond::Bond(const InstrumentDescription& desc)
+    : issueDate(desc.issueDate), maturity(desc.maturity), couponRate(desc.couponRate),
+      frequency(desc.frequency), notional(desc.notional),
+      couponDates(desc.couponDates), zeroCouponCurve(desc.zeroCouponCurve) {}
     /**
      * Compute the theoretical price of the bond using discount factors.
      * @return The computed bond price.

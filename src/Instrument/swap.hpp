@@ -1,30 +1,31 @@
-/*#ifndef SWAP_HPP
+#ifndef SWAP_HPP
 #define SWAP_HPP
 
-#include <vector>
-#include <cmath>
-#include <memory>
-#include "instrument.hpp"  // Asegurar que la clase base está incluida
+#include "instrument.hpp"
+#include "instrument_description.hpp"
+#include "zero_coupon_curve.hpp"
+#include <boost/date_time/gregorian/gregorian.hpp>
 
-class Swap: public Instrument {
+class Swap : public Instrument {
 public:
-    Swap() = default;  // Prohíbe la creación sin parámetros
-    Swap(double notional, double fixedRate, const std::vector<double>& zeroRates, 
-         const std::vector<double>& maturities, double frequency);
+    Swap(const InstrumentDescription& description);
 
-    double price() const;  // Valor presente del swap
+    double price() const;
 
 private:
-    double notional_;                   // Monto nocional
-    double fixedRate_;                   // Tasa fija
-    std::vector<double> zeroRates_;      // Tasas cero cupón continuamente compuestas
-    std::vector<double> maturities_;     // Fechas de vencimiento
-    double frequency_;                   // Frecuencia de pagos (ej. 2 para semestral)
+    double notional_;
+    double fixedRate_;
+    double fixedFrequency_;
+    double floatingFrequency_;
+    double initialFloatingRate_;
+    std::string floatingIndex_;
+    std::string dayCountConvention_;
+    boost::gregorian::date issueDate_;
+    double maturity_;
 
-    double discountFactor(double rate, double time) const;  // Factor de descuento
-    double forwardRate(int i) const;  // Cálculo del tipo forward
-    double convertToSemiannual(double continuousRate) const;  // Conversión a tasa semianual
+    std::shared_ptr<ZeroCouponCurve> zeroCouponCurve_;
+
+    double accrualFraction(const boost::gregorian::date& start, const boost::gregorian::date& end) const;
 };
 
 #endif // SWAP_HPP
-*/

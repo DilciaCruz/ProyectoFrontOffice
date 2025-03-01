@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_factory.dir/test_factory.cpp.o -o ../../../test_factory  -Wl,-rpath,/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build /usr/lib/aarch64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 

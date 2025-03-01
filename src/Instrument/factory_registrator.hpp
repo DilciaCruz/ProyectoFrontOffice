@@ -9,4 +9,6 @@ public:
     FactoryRegistrator();
 };
 
+
+
 #endif // FACTORY_REGISTRATOR_HPP

@@ -2,12 +2,16 @@
 #include "bond_builder.hpp"
 #include "swap_builder.hpp"
 
-template<typename BuilderClass>
-FactoryRegistrator<BuilderClass>::FactoryRegistrator() {
-    // Registra el constructor del Builder (usando el tipo de instrumento como ID)
-    Factory::instance().register_constructor(BuilderClass::getId(), &BuilderClass::build);
+template<>
+FactoryRegistrator<BondBuilder>::FactoryRegistrator() {
+    Factory::instance().register_constructor(BondBuilder::getId(), &BondBuilder::build);
 }
 
-// Especializaciones para BondBuilder y SwapBuilder
+template<>
+FactoryRegistrator<SwapBuilder>::FactoryRegistrator() {
+    Factory::instance().register_constructor(SwapBuilder::getId(), &SwapBuilder::build);
+}
+
+// Definir explícitamente las especializaciones
 template class FactoryRegistrator<BondBuilder>;
-//template class FactoryRegistrator<SwapBuilder>;
+template class FactoryRegistrator<SwapBuilder>;

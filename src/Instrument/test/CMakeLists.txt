@@ -1,13 +1,10 @@
+# Incluir las funciones personalizadas para Boost Test
 include(${CMAKE_SOURCE_DIR}/cmake-lib/CMakeBoostTest.cmake)
 
-# Buscar Boost
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+# Mensaje opcional para depuración
+message("--> Configurando tests unitarios de Instrument...")
 
-if(Boost_FOUND)
-    message("--> Boost encontrado en: ${Boost_INCLUDE_DIRS}")
-else()
-    message(FATAL_ERROR "Boost no encontrado. Instálalo y verifica las rutas.")
-endif()
-
-# Crear la prueba usando la función `boost_test_project`
-boost_test_project(NAME test_bond DEPS Instrument)
+# Definir cada test como un ejecutable separado usando la macro personalizada `boost_test_project`
+boost_test_project(NAME test_bond SRCS test_bond.cpp DEPS Instrument)
+boost_test_project(NAME test_swap SRCS test_swap.cpp DEPS Instrument)
+boost_test_project(NAME test_factory SRCS test_factory.cpp DEPS Instrument)

@@ -1,4 +1,4 @@
-/*#ifndef SWAP_BUILDER_HPP
+#ifndef SWAP_BUILDER_HPP
 #define SWAP_BUILDER_HPP
 
 #include "swap.hpp"
@@ -10,4 +10,4 @@ public:
     static InstrumentDescription::Type getId();
 };
 
-#endif // SWAP_BUILDER_HPP*/
+#endif // SWAP_BUILDER_HPP

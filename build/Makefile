@@ -152,6 +152,32 @@ test_bond/fast:
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/build
 .PHONY : test_bond/fast
 
+#=============================================================================
+# Target rules for targets named test_swap
+
+# Build rule for target.
+test_swap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_swap
+.PHONY : test_swap
+
+# fast build rule for target.
+test_swap/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/build
+.PHONY : test_swap/fast
+
+#=============================================================================
+# Target rules for targets named test_factory
+
+# Build rule for target.
+test_factory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_factory
+.PHONY : test_factory
+
+# fast build rule for target.
+test_factory/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
+.PHONY : test_factory/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,6 +189,8 @@ help:
 	@echo "... test"
 	@echo "... Instrument"
 	@echo "... test_bond"
+	@echo "... test_factory"
+	@echo "... test_swap"
 .PHONY : help
 
 

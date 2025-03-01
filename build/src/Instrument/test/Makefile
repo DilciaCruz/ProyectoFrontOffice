@@ -140,6 +140,34 @@ test_bond/fast:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/build
 .PHONY : test_bond/fast
 
+# Convenience name for target.
+src/Instrument/test/CMakeFiles/test_swap.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_swap.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_swap.dir/rule
+
+# Convenience name for target.
+test_swap: src/Instrument/test/CMakeFiles/test_swap.dir/rule
+.PHONY : test_swap
+
+# fast build rule for target.
+test_swap/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/build
+.PHONY : test_swap/fast
+
+# Convenience name for target.
+src/Instrument/test/CMakeFiles/test_factory.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_factory.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_factory.dir/rule
+
+# Convenience name for target.
+test_factory: src/Instrument/test/CMakeFiles/test_factory.dir/rule
+.PHONY : test_factory
+
+# fast build rule for target.
+test_factory/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
+.PHONY : test_factory/fast
+
 test_bond.o: test_bond.cpp.o
 .PHONY : test_bond.o
 
@@ -164,36 +192,12 @@ test_bond.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.s
 .PHONY : test_bond.cpp.s
 
-test_day_count.o: test_day_count.cpp.o
-.PHONY : test_day_count.o
-
-# target to build an object file
-test_day_count.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.o
-.PHONY : test_day_count.cpp.o
-
-test_day_count.i: test_day_count.cpp.i
-.PHONY : test_day_count.i
-
-# target to preprocess a source file
-test_day_count.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.i
-.PHONY : test_day_count.cpp.i
-
-test_day_count.s: test_day_count.cpp.s
-.PHONY : test_day_count.s
-
-# target to generate assembly for a file
-test_day_count.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_day_count.cpp.s
-.PHONY : test_day_count.cpp.s
-
 test_factory.o: test_factory.cpp.o
 .PHONY : test_factory.o
 
 # target to build an object file
 test_factory.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.o
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.o
 .PHONY : test_factory.cpp.o
 
 test_factory.i: test_factory.cpp.i
@@ -201,7 +205,7 @@ test_factory.i: test_factory.cpp.i
 
 # target to preprocess a source file
 test_factory.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.i
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.i
 .PHONY : test_factory.cpp.i
 
 test_factory.s: test_factory.cpp.s
@@ -209,32 +213,32 @@ test_factory.s: test_factory.cpp.s
 
 # target to generate assembly for a file
 test_factory.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_factory.cpp.s
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.s
 .PHONY : test_factory.cpp.s
 
-test_tir.o: test_tir.cpp.o
-.PHONY : test_tir.o
+test_swap.o: test_swap.cpp.o
+.PHONY : test_swap.o
 
 # target to build an object file
-test_tir.cpp.o:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.o
-.PHONY : test_tir.cpp.o
+test_swap.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/test_swap.cpp.o
+.PHONY : test_swap.cpp.o
 
-test_tir.i: test_tir.cpp.i
-.PHONY : test_tir.i
+test_swap.i: test_swap.cpp.i
+.PHONY : test_swap.i
 
 # target to preprocess a source file
-test_tir.cpp.i:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.i
-.PHONY : test_tir.cpp.i
+test_swap.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/test_swap.cpp.i
+.PHONY : test_swap.cpp.i
 
-test_tir.s: test_tir.cpp.s
-.PHONY : test_tir.s
+test_swap.s: test_swap.cpp.s
+.PHONY : test_swap.s
 
 # target to generate assembly for a file
-test_tir.cpp.s:
-	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_tir.cpp.s
-.PHONY : test_tir.cpp.s
+test_swap.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/test_swap.cpp.s
+.PHONY : test_swap.cpp.s
 
 # Help Target
 help:
@@ -246,18 +250,17 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_bond"
+	@echo "... test_factory"
+	@echo "... test_swap"
 	@echo "... test_bond.o"
 	@echo "... test_bond.i"
 	@echo "... test_bond.s"
-	@echo "... test_day_count.o"
-	@echo "... test_day_count.i"
-	@echo "... test_day_count.s"
 	@echo "... test_factory.o"
 	@echo "... test_factory.i"
 	@echo "... test_factory.s"
-	@echo "... test_tir.o"
-	@echo "... test_tir.i"
-	@echo "... test_tir.s"
+	@echo "... test_swap.o"
+	@echo "... test_swap.i"
+	@echo "... test_swap.s"
 .PHONY : help
 
 

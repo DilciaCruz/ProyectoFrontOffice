@@ -141,4 +141,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/Instrument/CMakeFiles/Instrument.dir/DependInfo.cmake"
   "src/Instrument/test/CMakeFiles/test_bond.dir/DependInfo.cmake"
+  "src/Instrument/test/CMakeFiles/test_swap.dir/DependInfo.cmake"
+  "src/Instrument/test/CMakeFiles/test_factory.dir/DependInfo.cmake"
   )

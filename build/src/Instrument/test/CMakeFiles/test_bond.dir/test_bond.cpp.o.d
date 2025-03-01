@@ -976,10 +976,11 @@ src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.o: \
  /usr/include/boost/date_time/find_match.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../instrument.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../zero_coupon_curve.hpp \
+ /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../instrument_description.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../zero_coupon_curve.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../instrument_description.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../factory.hpp \
- /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../instrument_description.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../bond_builder.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../bond.hpp \
- /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../swap_builder.hpp
+ /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../factory_registrator.hpp \
+ /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test/../factory.hpp

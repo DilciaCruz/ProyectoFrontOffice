@@ -846,5 +846,6 @@ src/Instrument/CMakeFiles/Instrument.dir/bond.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/zero_coupon_curve.hpp \
+ /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/instrument_description.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/actual_360.hpp \
  /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/day_count_calculator.hpp

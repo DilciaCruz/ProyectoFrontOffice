@@ -22,10 +22,14 @@ struct InstrumentDescription {
     std::vector<double> couponDates;
 
     // Solo para swaps
-    std::vector<double> fixedLegCashFlows;
-    std::vector<double> floatingLegCashFlows;
+   // Solo para swaps
     double fixedRate = 0.0;
-    std::string floatingIndex;
+    double fixedFrequency = 0.0;     // Frecuencia de la pata fija
+    double floatingFrequency = 0.0;  // Frecuencia de la pata flotante
+    double initialFixing = 0.0;      // Fixing inicial de la tasa flotante
+    std::string floatingIndex;       // Ejemplo: "Euribor6M"
+    std::string dayCountConvention;  // ACT/360 o 30/360
+
 
     std::shared_ptr<ZeroCouponCurve> zeroCouponCurve;
 
