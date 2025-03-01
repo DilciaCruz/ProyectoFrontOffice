@@ -1,4 +1,3 @@
-
 #include "swap.hpp"
 #include "actual_360.hpp"
 #include "thirty_360.hpp"
@@ -12,12 +11,19 @@ Swap::Swap(const InstrumentDescription& desc)
       initialFloatingRate_(desc.initialFixing), floatingIndex_(desc.floatingIndex),
       dayCountConvention_(desc.dayCountConvention), issueDate_(desc.issueDate),
       maturity_(desc.maturity), zeroCouponCurve_(desc.zeroCouponCurve) {}
+
 double Swap::price() const {
+    std::cout << "\n>>> Calculando precio del swap:\n";
+    std::cout << "Notional: " << notional_ << "\n"
+              << "Fixed Rate: " << fixedRate_ << "\n"
+              << "Maturity: " << maturity_ << " años\n"
+              << "Fixed Frequency: " << fixedFrequency_ << "\n"
+              << "Floating Frequency: " << floatingFrequency_ << "\n\n";
+
     double fixedLegPV = 0.0;
     double floatingLegPV = 0.0;
 
     std::unique_ptr<DayCountCalculator> dayCountCalculator;
-
     if (dayCountConvention_ == "ACT/360") {
         dayCountCalculator = std::make_unique<Actual_360>();
     } else if (dayCountConvention_ == "30/360") {
@@ -26,59 +32,58 @@ double Swap::price() const {
         throw std::invalid_argument("Convención de días no soportada.");
     }
 
-    std::cout << "\n>>> Calculando precio del swap:\n";
-    std::cout << "Notional: " << notional_ << "\n";
-    std::cout << "Fixed Rate: " << fixedRate_ << "\n";
-    std::cout << "Maturity: " << maturity_ << " años\n";
-    std::cout << "Fixed Frequency: " << fixedFrequency_ << "\n";
-    std::cout << "Floating Frequency: " << floatingFrequency_ << "\n\n";
-
-    boost::gregorian::date currentDate = issueDate_;
+    boost::gregorian::date paymentDate = issueDate_;
     double previousTime = 0.0;
     double currentFloatingRate = initialFloatingRate_;
 
-    for (double t = fixedFrequency_; t <= maturity_; t += fixedFrequency_) {
-        boost::gregorian::date nextPaymentDate = currentDate + boost::gregorian::months(static_cast<int>(12 / fixedFrequency_));
+    std::cout << "Periodo | Fecha Pago | Accrual | DF | Fixed CF | PV Fixed | Float Rate | Float CF | PV Float\n";
+    std::cout << "------------------------------------------------------------------------------------------------\n";
 
-        double accrual = dayCountCalculator->compute_daycount(currentDate, nextPaymentDate) / 360.0;
+    for (int period = 1; paymentDate < issueDate_ + boost::gregorian::years(static_cast<int>(maturity_)); ++period) {
+        paymentDate += boost::gregorian::months(static_cast<int>(12 / fixedFrequency_));
+        double t = period * (1.0 / fixedFrequency_);
+        double accrual = dayCountCalculator->compute_daycount(issueDate_, paymentDate) / 360.0;
         double DF = zeroCouponCurve_->getDiscountFactor(t);
 
-        std::cout << "[Periodo t = " << t 
-                  << "] Fecha: " << boost::gregorian::to_simple_string(nextPaymentDate) 
-                  << " | Accrual: " << accrual 
-                  << " | Discount Factor: " << DF << "\n";
-
         double fixedCashFlow = notional_ * fixedRate_ * accrual;
-        fixedLegPV += fixedCashFlow * DF;
+        double pvFixed = fixedCashFlow * DF;
+        fixedLegPV += pvFixed;
 
-        std::cout << "  -> Fixed Cash Flow: " << fixedCashFlow << " | PV Fixed: " << fixedLegPV << "\n";
-
-        if (t > fixedFrequency_) {
+        // Forward y efectivo solo después del primer periodo
+        if (period > 1) {
             double forwardRate = zeroCouponCurve_->forwardRate(previousTime, t);
             currentFloatingRate = zeroCouponCurve_->continuousToEffective(forwardRate, floatingFrequency_);
         }
 
         double floatingCashFlow = notional_ * currentFloatingRate * accrual;
-        floatingLegPV += floatingCashFlow * DF;
+        double pvFloating = floatingCashFlow * DF;
+        floatingLegPV += pvFloating;
 
-        std::cout << "  -> Floating Rate: " << currentFloatingRate 
-                  << " | Floating Cash Flow: " << floatingCashFlow 
-                  << " | PV Floating: " << floatingLegPV << "\n\n";
+        std::cout << std::setw(7) << period << " | "
+                  << paymentDate << " | "
+                  << std::fixed << std::setprecision(6) << accrual << " | "
+                  << std::fixed << std::setprecision(5) << DF << " | "
+                  << std::scientific << fixedCashFlow << " | "
+                  << pvFixed << " | "
+                  << std::fixed << std::setprecision(3) << (currentFloatingRate * 100) << "% | "
+                  << std::scientific << floatingCashFlow << " | "
+                  << pvFloating << "\n";
 
         previousTime = t;
-        currentDate = nextPaymentDate;  // Avanza la fecha base para el próximo pago
     }
 
     double finalDF = zeroCouponCurve_->getDiscountFactor(maturity_);
     fixedLegPV += notional_ * finalDF;
     floatingLegPV += notional_ * finalDF;
 
-    std::cout << "Valor Nominal Final Descontado (DF=" << finalDF << "): " 
-              << notional_ * finalDF << "\n\n";
+    std::cout << "------------------------------------------------------------------------------------------------\n";
+    std::cout << "Final   | " << paymentDate << " |    -    | " 
+              << std::fixed << std::setprecision(5) << finalDF << " | "
+              << "        - | " << notional_ * finalDF << " |"
+              << "        - |         - | " << notional_ * finalDF << "\n";
 
-    double swapPrice = floatingLegPV - fixedLegPV;
+    double price = floatingLegPV - fixedLegPV;
+    std::cout << "\n>>> Precio calculado del Swap: " << price << "\n\n";
 
-    std::cout << ">>> Precio del Swap calculado: " << swapPrice << "\n";
-
-    return swapPrice;
+    return price;
 }

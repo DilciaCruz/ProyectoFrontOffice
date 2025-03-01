@@ -6,6 +6,7 @@
 #include "../factory.hpp"
 #include "../bond_builder.hpp"
 #include "../factory_registrator.hpp"
+#include "day_count_calculator.hpp"
 
 // Registrar el BondBuilder automáticamente
 static FactoryRegistrator<BondBuilder> bondRegistrator;
