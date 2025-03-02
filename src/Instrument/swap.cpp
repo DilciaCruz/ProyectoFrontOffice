@@ -80,10 +80,11 @@ double Swap::price() const {
     pvFloating += notional_ * finalDF;
 
     std::cout << "---------------------------------------------------------------------------------------------------\n";
-    std::cout << "Final   | " << paymentDate << " |    -    | " 
-              << std::fixed << std::setprecision(5) << finalDF << " | "
-              << "        - |         - |         - | " 
+    std::cout << "Valor Presente al | " << paymentDate << " Con un Factor de descuento de: " 
+              << std::fixed << std::setprecision(5) << finalDF << " "
+              << " y un valor presente fijo de: " 
               << pvFixed << "M | "
+              << " y un valor presente flotante de: " 
               << pvFloating << "M\n";
 
     double npv = pvFloating - pvFixed;

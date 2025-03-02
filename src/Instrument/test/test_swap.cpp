@@ -42,7 +42,7 @@ BOOST_AUTO_TEST_CASE(TestSwapPricing) {
 
     double price = swap->price();
 
-    BOOST_TEST_MESSAGE("Precio calculado del Swap: " << price);
+    BOOST_TEST_MESSAGE("Precio calculado del Swap: " << price * 1000000);
     BOOST_CHECK(price > -5.0 && price < 5.0);
 }
 
