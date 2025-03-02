@@ -15,41 +15,60 @@
      * Compute the theoretical price of the bond using discount factors.
      * @return The computed bond price.
      */
-double Bond::price() const{
-        double price = 0.0;
-        Actual_360 calculator;
+    double Bond::price() const {
+    double price = 0.0;
+    Actual_360 calculator;
 
-        std::cout << "\nMaturity: " << std::setprecision(2) << maturity << " años | Cupón Rate: " << std::setprecision(2) << couponRate * 100 << "% | Frecuencia: " << std::setprecision(0) <<frequency 
-                  << " pays/year | Notional: $" << notional << "\n";
-        std::cout << std::string(65, '-') << "\n";
-        std::cout << "\nCalculate Bond Price"<<std::endl ;
-        std::cout << "Formula used to calculate Bond Price Σ(Coupon * e^(-rate * matutity)): being Discount Factor = e^(-rate * matutity) " << "\n";
-        std::cout << "\nCoupon | Maturity | Discount Factor | Present Cash Flows\n";
-        std::cout << std::string(65, '-') << "\n";
+    std::cout << "\nMaturity: " << std::setprecision(2) << maturity << " años | Cupón Rate: " 
+              << std::setprecision(2) << couponRate * 100 << "% | Frecuencia: " 
+              << std::setprecision(0) << frequency << " pagos por año | Notional: $" << notional << "\n";
+    std::cout << std::string(95, '-') << "\n";
+    std::cout << "\nCalculando Precio Teórico del Bono\n";
+    std::cout << "Formula: Σ(Cupón * DF) + (Notional * DF Final)\n";
+    std::cout << "\nPeriodo | Fecha Pago | Maturity | Cupón | Discount Factor | Cupón Descontado | Precio acumulado\n";
+    std::cout << std::string(95, '-') << "\n";
 
-        for (double date : couponDates) {
-            boost::gregorian::date payment_date = issueDate + boost::gregorian::days(static_cast<int>(date * 360));
-            double accrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, payment_date)) / 360.0;
+    for (size_t i = 0; i < couponDates.size(); ++i) {
+        double date = couponDates[i];
+        boost::gregorian::date payment_date = issueDate + boost::gregorian::days(static_cast<int>(date * 360));
+        double accrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, payment_date)) / 360.0;
 
-            double discountFactor = zeroCouponCurve->getDiscountFactor(accrualFraction);
-            double coupon = (couponRate / frequency) * notional;
-            price += coupon * discountFactor;
-            std::cout << std::setw(6) << std::setprecision(0) << std::fixed << coupon
-                      << " | " << std::setw(8) << std::setprecision(2) << std::fixed << accrualFraction
-                      << " | " << std::setw(15) << std::setprecision(5) << discountFactor
-                      << " | " << std::setw(15) << std::setprecision(4) << price << "\n";
-                        
-     
-        }
-        // Add discounted notional amount
-        boost::gregorian::date maturityDate = issueDate + boost::gregorian::days(static_cast<int>(maturity * 360));
-        double finalAccrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, maturityDate)) / 360.0;
-        double finalDiscount = zeroCouponCurve->getDiscountFactor(finalAccrualFraction);
-        price += notional * finalDiscount;
-        std::cout << std::setw(35) << std::setprecision(5) << finalDiscount << " |" << std::setw(16) << std::setprecision(4) << price << "\n";
-        std::cout << std::string(65, '-') << "\n";
-        return price;
+        double discountFactor = zeroCouponCurve->getDiscountFactor(accrualFraction);
+        double coupon = (couponRate / frequency) * notional;
+        double discountedCashFlow = coupon * discountFactor;
+
+        price += discountedCashFlow;
+
+        std::cout << std::setw(7) << (i+1) << " | "
+                  << payment_date << " | "
+                  << std::fixed << std::setprecision(6) << accrualFraction << " | "
+                  << std::setw(6) << std::setprecision(2) << coupon << " | "
+                  << std::setw(15) << std::setprecision(5) << discountFactor << " | "
+                  << std::setw(16) << std::setprecision(5) << discountedCashFlow << " | "
+                  << std::setw(16) << std::setprecision(5) << price << "\n";
     }
+
+    // Flujo final: notional descontado
+    boost::gregorian::date maturityDate = issueDate + boost::gregorian::days(static_cast<int>(maturity * 360));
+    double finalAccrualFraction = static_cast<double>(calculator.compute_daycount(issueDate, maturityDate)) / 360.0;
+    double finalDiscount = zeroCouponCurve->getDiscountFactor(finalAccrualFraction);
+    double finalDiscountedPayment = notional * finalDiscount;
+
+    price += finalDiscountedPayment;
+
+    std::cout << std::setw(7) << "Final" << " | "
+              << maturityDate << " | "
+              << std::fixed << std::setprecision(6) << finalAccrualFraction << " | "
+              << std::setw(6) << std::setprecision(2) << notional << " | "
+              << std::setw(15) << std::setprecision(5) << finalDiscount << " | "
+              << std::setw(16) << std::setprecision(5) << finalDiscountedPayment << " | "
+              << std::setw(16) << std::setprecision(5) << price << "\n";
+
+    std::cout << std::string(95, '-') << "\n";
+    std::cout << "Precio Total del Bono (Suma de flujos descontados): $" << std::fixed << std::setprecision(5) << price << "\n";
+
+    return price;
+}
 double Bond::yieldToMaturity(double initialGuess, int maxIterations, double tolerance, double priceBond) const {
     double estimatedYTM = initialGuess;  
 

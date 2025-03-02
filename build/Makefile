@@ -191,6 +191,32 @@ test_zerocouponCurveSwap/fast:
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
 .PHONY : test_zerocouponCurveSwap/fast
 
+#=============================================================================
+# Target rules for targets named test_zero_coupon_discount
+
+# Build rule for target.
+test_zero_coupon_discount: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_zero_coupon_discount
+.PHONY : test_zero_coupon_discount
+
+# fast build rule for target.
+test_zero_coupon_discount/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build
+.PHONY : test_zero_coupon_discount/fast
+
+#=============================================================================
+# Target rules for targets named test_tir
+
+# Build rule for target.
+test_tir: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_tir
+.PHONY : test_tir
+
+# fast build rule for target.
+test_tir/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/build
+.PHONY : test_tir/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -204,6 +230,8 @@ help:
 	@echo "... test_bond"
 	@echo "... test_factory"
 	@echo "... test_swap"
+	@echo "... test_tir"
+	@echo "... test_zero_coupon_discount"
 	@echo "... test_zerocouponCurveSwap"
 .PHONY : help
 

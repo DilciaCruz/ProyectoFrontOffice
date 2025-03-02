@@ -48,7 +48,7 @@ BOOST_AUTO_TEST_CASE(TestBondPrice) {
         // Parámetros para Newton-Raphson
         double tolerance = 1.48E-08;
         int maxIterations = 50;
-        double initialGuess = 0.08;
+        double initialGuess = 0.05;
 
         // Calcular TIR (YTM)
         double computedYTM = bond->yieldToMaturity(initialGuess, maxIterations, tolerance, computedPrice);

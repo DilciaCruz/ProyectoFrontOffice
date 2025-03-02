@@ -182,6 +182,34 @@ test_zerocouponCurveSwap/fast:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
 .PHONY : test_zerocouponCurveSwap/fast
 
+# Convenience name for target.
+src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule
+
+# Convenience name for target.
+test_zero_coupon_discount: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule
+.PHONY : test_zero_coupon_discount
+
+# fast build rule for target.
+test_zero_coupon_discount/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build
+.PHONY : test_zero_coupon_discount/fast
+
+# Convenience name for target.
+src/Instrument/test/CMakeFiles/test_tir.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_tir.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/rule
+
+# Convenience name for target.
+test_tir: src/Instrument/test/CMakeFiles/test_tir.dir/rule
+.PHONY : test_tir
+
+# fast build rule for target.
+test_tir/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/build
+.PHONY : test_tir/fast
+
 test_bond.o: test_bond.cpp.o
 .PHONY : test_bond.o
 
@@ -254,6 +282,54 @@ test_swap.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/test_swap.cpp.s
 .PHONY : test_swap.cpp.s
 
+test_tir.o: test_tir.cpp.o
+.PHONY : test_tir.o
+
+# target to build an object file
+test_tir.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/test_tir.cpp.o
+.PHONY : test_tir.cpp.o
+
+test_tir.i: test_tir.cpp.i
+.PHONY : test_tir.i
+
+# target to preprocess a source file
+test_tir.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/test_tir.cpp.i
+.PHONY : test_tir.cpp.i
+
+test_tir.s: test_tir.cpp.s
+.PHONY : test_tir.s
+
+# target to generate assembly for a file
+test_tir.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/test_tir.cpp.s
+.PHONY : test_tir.cpp.s
+
+test_zero_coupon_discount.o: test_zero_coupon_discount.cpp.o
+.PHONY : test_zero_coupon_discount.o
+
+# target to build an object file
+test_zero_coupon_discount.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/test_zero_coupon_discount.cpp.o
+.PHONY : test_zero_coupon_discount.cpp.o
+
+test_zero_coupon_discount.i: test_zero_coupon_discount.cpp.i
+.PHONY : test_zero_coupon_discount.i
+
+# target to preprocess a source file
+test_zero_coupon_discount.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/test_zero_coupon_discount.cpp.i
+.PHONY : test_zero_coupon_discount.cpp.i
+
+test_zero_coupon_discount.s: test_zero_coupon_discount.cpp.s
+.PHONY : test_zero_coupon_discount.s
+
+# target to generate assembly for a file
+test_zero_coupon_discount.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/test_zero_coupon_discount.cpp.s
+.PHONY : test_zero_coupon_discount.cpp.s
+
 test_zerocouponCurveSwap.o: test_zerocouponCurveSwap.cpp.o
 .PHONY : test_zerocouponCurveSwap.o
 
@@ -290,6 +366,8 @@ help:
 	@echo "... test_bond"
 	@echo "... test_factory"
 	@echo "... test_swap"
+	@echo "... test_tir"
+	@echo "... test_zero_coupon_discount"
 	@echo "... test_zerocouponCurveSwap"
 	@echo "... test_bond.o"
 	@echo "... test_bond.i"
@@ -300,6 +378,12 @@ help:
 	@echo "... test_swap.o"
 	@echo "... test_swap.i"
 	@echo "... test_swap.s"
+	@echo "... test_tir.o"
+	@echo "... test_tir.i"
+	@echo "... test_tir.s"
+	@echo "... test_zero_coupon_discount.o"
+	@echo "... test_zero_coupon_discount.i"
+	@echo "... test_zero_coupon_discount.s"
 	@echo "... test_zerocouponCurveSwap.o"
 	@echo "... test_zerocouponCurveSwap.i"
 	@echo "... test_zerocouponCurveSwap.s"

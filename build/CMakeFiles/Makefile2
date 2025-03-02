@@ -114,6 +114,8 @@ src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_bond.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_swap.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_factory.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all
+src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
+src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_tir.dir/all
 .PHONY : src/Instrument/test/all
 
 # Recursive "preinstall" directory target.
@@ -125,6 +127,8 @@ src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_bond.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_swap.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_factory.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean
+src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean
+src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_tir.dir/clean
 .PHONY : src/Instrument/test/clean
 
 #=============================================================================
@@ -238,7 +242,7 @@ src/Instrument/test/CMakeFiles/test_factory.dir/clean:
 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=20,21 "Built target test_zerocouponCurveSwap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=24,25 "Built target test_zerocouponCurveSwap"
 .PHONY : src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -256,6 +260,58 @@ test_zerocouponCurveSwap: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwa
 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean
 .PHONY : src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean
+
+#=============================================================================
+# Target rules for target src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir
+
+# All Build rule for target.
+src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=22,23 "Built target test_zero_coupon_discount"
+.PHONY : src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
+
+# Build rule for subdir invocation for target.
+src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles 15
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles 0
+.PHONY : src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule
+
+# Convenience name for target.
+test_zero_coupon_discount: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/rule
+.PHONY : test_zero_coupon_discount
+
+# clean rule for target.
+src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean
+.PHONY : src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean
+
+#=============================================================================
+# Target rules for target src/Instrument/test/CMakeFiles/test_tir.dir
+
+# All Build rule for target.
+src/Instrument/test/CMakeFiles/test_tir.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles --progress-num=20,21 "Built target test_tir"
+.PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/all
+
+# Build rule for subdir invocation for target.
+src/Instrument/test/CMakeFiles/test_tir.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles 15
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_tir.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/CMakeFiles 0
+.PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/rule
+
+# Convenience name for target.
+test_tir: src/Instrument/test/CMakeFiles/test_tir.dir/rule
+.PHONY : test_tir
+
+# clean rule for target.
+src/Instrument/test/CMakeFiles/test_tir.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/clean
+.PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
