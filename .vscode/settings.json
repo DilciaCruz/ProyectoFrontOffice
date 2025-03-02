@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/Instrument",
+    "cmake.sourceDirectory": "${workspaceFolder}/Instrument",
     "files.associations": {
         "cctype": "cpp",
         "clocale": "cpp",
