@@ -30,7 +30,7 @@ YieldCurve::YieldCurve() : zeroCouponBondPrices{}, maturities{} {}
 
     return y0 + (accrualFraction - x0) * (y1 - y0) / (x1 - x0);
 }
-    /*double YieldCurve::getZero(double accrualFraction) const {
+   /* double YieldCurve::getZero(double accrualFraction) const {
         auto it = std::lower_bound(maturities.begin(), maturities.end(), accrualFraction);
         // Calculate zero-coupon bond prices using discount rates
         if (it == maturities.end()) return zeroCouponBondPrices.back();  // Return last factor if not found

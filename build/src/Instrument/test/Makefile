@@ -168,6 +168,20 @@ test_factory/fast:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
 .PHONY : test_factory/fast
 
+# Convenience name for target.
+src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule
+
+# Convenience name for target.
+test_zerocouponCurveSwap: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule
+.PHONY : test_zerocouponCurveSwap
+
+# fast build rule for target.
+test_zerocouponCurveSwap/fast:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
+.PHONY : test_zerocouponCurveSwap/fast
+
 test_bond.o: test_bond.cpp.o
 .PHONY : test_bond.o
 
@@ -240,6 +254,30 @@ test_swap.cpp.s:
 	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/test_swap.cpp.s
 .PHONY : test_swap.cpp.s
 
+test_zerocouponCurveSwap.o: test_zerocouponCurveSwap.cpp.o
+.PHONY : test_zerocouponCurveSwap.o
+
+# target to build an object file
+test_zerocouponCurveSwap.cpp.o:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/test_zerocouponCurveSwap.cpp.o
+.PHONY : test_zerocouponCurveSwap.cpp.o
+
+test_zerocouponCurveSwap.i: test_zerocouponCurveSwap.cpp.i
+.PHONY : test_zerocouponCurveSwap.i
+
+# target to preprocess a source file
+test_zerocouponCurveSwap.cpp.i:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/test_zerocouponCurveSwap.cpp.i
+.PHONY : test_zerocouponCurveSwap.cpp.i
+
+test_zerocouponCurveSwap.s: test_zerocouponCurveSwap.cpp.s
+.PHONY : test_zerocouponCurveSwap.s
+
+# target to generate assembly for a file
+test_zerocouponCurveSwap.cpp.s:
+	cd /home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/test_zerocouponCurveSwap.cpp.s
+.PHONY : test_zerocouponCurveSwap.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +290,7 @@ help:
 	@echo "... test_bond"
 	@echo "... test_factory"
 	@echo "... test_swap"
+	@echo "... test_zerocouponCurveSwap"
 	@echo "... test_bond.o"
 	@echo "... test_bond.i"
 	@echo "... test_bond.s"
@@ -261,6 +300,9 @@ help:
 	@echo "... test_swap.o"
 	@echo "... test_swap.i"
 	@echo "... test_swap.s"
+	@echo "... test_zerocouponCurveSwap.o"
+	@echo "... test_zerocouponCurveSwap.i"
+	@echo "... test_zerocouponCurveSwap.s"
 .PHONY : help
 
 

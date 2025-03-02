@@ -178,6 +178,19 @@ test_factory/fast:
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
 .PHONY : test_factory/fast
 
+#=============================================================================
+# Target rules for targets named test_zerocouponCurveSwap
+
+# Build rule for target.
+test_zerocouponCurveSwap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_zerocouponCurveSwap
+.PHONY : test_zerocouponCurveSwap
+
+# fast build rule for target.
+test_zerocouponCurveSwap/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
+.PHONY : test_zerocouponCurveSwap/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -191,6 +204,7 @@ help:
 	@echo "... test_bond"
 	@echo "... test_factory"
 	@echo "... test_swap"
+	@echo "... test_zerocouponCurveSwap"
 .PHONY : help
 
 

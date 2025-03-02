@@ -262,6 +262,15 @@ test_swap_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 test_swap_SOURCE_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test
 
+//Value Computed by CMake
+test_zerocouponCurveSwap_BINARY_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build/src/Instrument/test
+
+//Value Computed by CMake
+test_zerocouponCurveSwap_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+test_zerocouponCurveSwap_SOURCE_DIR:STATIC=/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/src/Instrument/test
+
 
 ########################
 # INTERNAL cache entries
