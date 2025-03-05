@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/test_bond.dir/test_bond.cpp.o -o ../../../test_bond  -Wl,-rpath,/home/dilcia/Documentos/FrontOffice/ProyectoFrontOffice/ProyectoFrontOffice/build /usr/lib/aarch64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 
+/usr/bin/c++ -g CMakeFiles/test_bond.dir/test_bond.cpp.o -o ../../../test_bond  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 

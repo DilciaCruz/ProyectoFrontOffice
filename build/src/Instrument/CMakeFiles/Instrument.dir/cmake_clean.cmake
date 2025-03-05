@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Instrument.dir/bond_builder.cpp.o.d"
   "CMakeFiles/Instrument.dir/day_count_calculator.cpp.o"
   "CMakeFiles/Instrument.dir/day_count_calculator.cpp.o.d"
+  "CMakeFiles/Instrument.dir/discount_curve_calibration.cpp.o"
+  "CMakeFiles/Instrument.dir/discount_curve_calibration.cpp.o.d"
   "CMakeFiles/Instrument.dir/factory.cpp.o"
   "CMakeFiles/Instrument.dir/factory.cpp.o.d"
   "CMakeFiles/Instrument.dir/factory_registrator.cpp.o"

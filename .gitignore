@@ -1,0 +1,29 @@
+# Ignore build directory
+build/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore C++ specific files
+*.obj
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+
+# Ignore editor and IDE files
+.vscode/
+*.code-workspace
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore dependency directories
+node_modules/
