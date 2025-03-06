@@ -5,8 +5,12 @@
 #include <stdexcept>
 #include <cmath>
 
-CurveCalibrator::CurveCalibrator(const boost::gregorian::date& baseDate) 
-    : baseDate_(baseDate), dayCalculator_(std::make_unique<Actual_360>()) {}
+// Constructor actualizado
+CurveCalibrator::CurveCalibrator(const boost::gregorian::date& baseDate, 
+                                InterpolationMethod method)
+    : baseDate_(baseDate), 
+      dayCalculator_(std::make_unique<Actual_360>()), 
+      interpolationMethod_(method) {}
 
 // Tomamos los depósitos como bonos cupón cero
 void CurveCalibrator::addDeposit(double rate, int months) {
@@ -234,7 +238,7 @@ std::vector<boost::gregorian::date> CurveCalibrator::buildPaymentDates(
     return dates;
 }
 
-// Método para interpolar factores de descuento
+// Método de interpolación modificado para soportar log-lineal
 double CurveCalibrator::interpolateDiscountFactor(
     double targetYearFraction,
     const std::vector<double>& maturities,
@@ -254,11 +258,46 @@ double CurveCalibrator::interpolateDiscountFactor(
         return discountFactors.back();
     }
     
-    // Interpolación lineal
+    // Obtener valores para la interpolación
     double t0 = maturities[i-1];
     double t1 = maturities[i];
     double df0 = discountFactors[i-1];
     double df1 = discountFactors[i];
     
-    return df0 + (targetYearFraction - t0) * (df1 - df0) / (t1 - t0);
+    // Elegir el tipo de interpolación
+    if (interpolationMethod_ == InterpolationMethod::LogLinear) {
+        /*
+         * INTERPOLACIÓN LOG-LINEAL DE FACTORES DE DESCUENTO
+         * =================================================
+         * Para un tiempo t entre dos puntos conocidos t0 y t1:
+         * 
+         * Fórmula: DF(t) = exp(ln(DF(t0)) * (t1 - t) / (t1 - t0) + ln(DF(t1)) * (t - t0) / (t1 - t0))
+         */
+        // Paso 1: Convertir factores de descuento a tasas
+        double r0 = -std::log(df0) / t0;
+        double r1 = -std::log(df1) / t1;
+        
+        // Paso 2: Aplicar interpolación log-lineal en las tasas
+        double weight1 = (targetYearFraction - t0) / (t1 - t0);
+        double weight0 = (t1 - targetYearFraction) / (t1 - t0);
+        
+        double lnr0 = std::log(r0);
+        double lnr1 = std::log(r1);
+        
+        double lnrT = weight1 * lnr1 + weight0 * lnr0;
+        double rT = std::exp(lnrT);
+        
+        // Paso 3: Convertir la tasa interpolada de vuelta a factor de descuento
+        return std::exp(-rT * targetYearFraction);
+    } 
+    else { // Interpolación lineal (predeterminada)
+        /*
+         * INTERPOLACIÓN LINEAL DE FACTORES DE DESCUENTO
+         * ============================================
+         * Para un tiempo t entre dos puntos conocidos t0 y t1:
+         * 
+         * Fórmula: DF(t) = DF(t0) + (t - t0) * (DF(t1) - DF(t0)) / (t1 - t0)
+         */
+        return df0 + (targetYearFraction - t0) * (df1 - df0) / (t1 - t0);
+    }
 }
