@@ -14,7 +14,7 @@
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_tir.dir
-/home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_discount_calibration.dir
+/home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_discount_curve.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/edit_cache.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/rebuild_cache.dir

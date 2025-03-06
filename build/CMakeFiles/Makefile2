@@ -116,7 +116,7 @@ src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_factory.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_tir.dir/all
-src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_discount_calibration.dir/all
+src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_discount_curve.dir/all
 .PHONY : src/Instrument/test/all
 
 # Recursive "preinstall" directory target.
@@ -130,7 +130,7 @@ src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_factory.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_tir.dir/clean
-src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_discount_calibration.dir/clean
+src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_discount_curve.dir/clean
 .PHONY : src/Instrument/test/clean
 
 #=============================================================================
@@ -316,30 +316,30 @@ src/Instrument/test/CMakeFiles/test_tir.dir/clean:
 .PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/clean
 
 #=============================================================================
-# Target rules for target src/Instrument/test/CMakeFiles/test_discount_calibration.dir
+# Target rules for target src/Instrument/test/CMakeFiles/test_discount_curve.dir
 
 # All Build rule for target.
-src/Instrument/test/CMakeFiles/test_discount_calibration.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=17,18 "Built target test_discount_calibration"
-.PHONY : src/Instrument/test/CMakeFiles/test_discount_calibration.dir/all
+src/Instrument/test/CMakeFiles/test_discount_curve.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=17,18 "Built target test_discount_curve"
+.PHONY : src/Instrument/test/CMakeFiles/test_discount_curve.dir/all
 
 # Build rule for subdir invocation for target.
-src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule: cmake_check_build_system
+src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_discount_calibration.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_discount_curve.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles 0
-.PHONY : src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule
 
 # Convenience name for target.
-test_discount_calibration: src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule
-.PHONY : test_discount_calibration
+test_discount_curve: src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule
+.PHONY : test_discount_curve
 
 # clean rule for target.
-src/Instrument/test/CMakeFiles/test_discount_calibration.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/clean
-.PHONY : src/Instrument/test/CMakeFiles/test_discount_calibration.dir/clean
+src/Instrument/test/CMakeFiles/test_discount_curve.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/clean
+.PHONY : src/Instrument/test/CMakeFiles/test_discount_curve.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

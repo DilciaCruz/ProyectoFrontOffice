@@ -259,6 +259,15 @@ test_discount_calibration_IS_TOP_LEVEL:STATIC=OFF
 test_discount_calibration_SOURCE_DIR:STATIC=/home/andreswo/Github/ProyectoFrontOffice/src/Instrument/test
 
 //Value Computed by CMake
+test_discount_curve_BINARY_DIR:STATIC=/home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test
+
+//Value Computed by CMake
+test_discount_curve_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+test_discount_curve_SOURCE_DIR:STATIC=/home/andreswo/Github/ProyectoFrontOffice/src/Instrument/test
+
+//Value Computed by CMake
 test_factory_BINARY_DIR:STATIC=/home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test
 
 //Value Computed by CMake

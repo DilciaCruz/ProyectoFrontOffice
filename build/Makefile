@@ -218,17 +218,17 @@ test_tir/fast:
 .PHONY : test_tir/fast
 
 #=============================================================================
-# Target rules for targets named test_discount_calibration
+# Target rules for targets named test_discount_curve
 
 # Build rule for target.
-test_discount_calibration: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_discount_calibration
-.PHONY : test_discount_calibration
+test_discount_curve: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_discount_curve
+.PHONY : test_discount_curve
 
 # fast build rule for target.
-test_discount_calibration/fast:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build
-.PHONY : test_discount_calibration/fast
+test_discount_curve/fast:
+	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/build
+.PHONY : test_discount_curve/fast
 
 # Help Target
 help:
@@ -241,7 +241,7 @@ help:
 	@echo "... test"
 	@echo "... Instrument"
 	@echo "... test_bond"
-	@echo "... test_discount_calibration"
+	@echo "... test_discount_curve"
 	@echo "... test_factory"
 	@echo "... test_swap"
 	@echo "... test_tir"

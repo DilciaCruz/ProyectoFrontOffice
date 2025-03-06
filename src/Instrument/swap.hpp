@@ -11,6 +11,7 @@ public:
     Swap(const InstrumentDescription& description);
 
     double price() const;
+    double getFixedFrequency() const { return fixedFrequency_; };
 
 private:
     double notional_;

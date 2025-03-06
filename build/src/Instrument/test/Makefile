@@ -211,18 +211,18 @@ test_tir/fast:
 .PHONY : test_tir/fast
 
 # Convenience name for target.
-src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule
-.PHONY : src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule
+src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule:
+	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule
+.PHONY : src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule
 
 # Convenience name for target.
-test_discount_calibration: src/Instrument/test/CMakeFiles/test_discount_calibration.dir/rule
-.PHONY : test_discount_calibration
+test_discount_curve: src/Instrument/test/CMakeFiles/test_discount_curve.dir/rule
+.PHONY : test_discount_curve
 
 # fast build rule for target.
-test_discount_calibration/fast:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build
-.PHONY : test_discount_calibration/fast
+test_discount_curve/fast:
+	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/build
+.PHONY : test_discount_curve/fast
 
 test_bond.o: test_bond.cpp.o
 .PHONY : test_bond.o
@@ -248,29 +248,29 @@ test_bond.cpp.s:
 	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_bond.dir/build.make src/Instrument/test/CMakeFiles/test_bond.dir/test_bond.cpp.s
 .PHONY : test_bond.cpp.s
 
-test_discount_calibration.o: test_discount_calibration.cpp.o
-.PHONY : test_discount_calibration.o
+test_discount_curve.o: test_discount_curve.cpp.o
+.PHONY : test_discount_curve.o
 
 # target to build an object file
-test_discount_calibration.cpp.o:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/test_discount_calibration.cpp.o
-.PHONY : test_discount_calibration.cpp.o
+test_discount_curve.cpp.o:
+	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/test_discount_curve.cpp.o
+.PHONY : test_discount_curve.cpp.o
 
-test_discount_calibration.i: test_discount_calibration.cpp.i
-.PHONY : test_discount_calibration.i
+test_discount_curve.i: test_discount_curve.cpp.i
+.PHONY : test_discount_curve.i
 
 # target to preprocess a source file
-test_discount_calibration.cpp.i:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/test_discount_calibration.cpp.i
-.PHONY : test_discount_calibration.cpp.i
+test_discount_curve.cpp.i:
+	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/test_discount_curve.cpp.i
+.PHONY : test_discount_curve.cpp.i
 
-test_discount_calibration.s: test_discount_calibration.cpp.s
-.PHONY : test_discount_calibration.s
+test_discount_curve.s: test_discount_curve.cpp.s
+.PHONY : test_discount_curve.s
 
 # target to generate assembly for a file
-test_discount_calibration.cpp.s:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_calibration.dir/build.make src/Instrument/test/CMakeFiles/test_discount_calibration.dir/test_discount_calibration.cpp.s
-.PHONY : test_discount_calibration.cpp.s
+test_discount_curve.cpp.s:
+	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/test_discount_curve.cpp.s
+.PHONY : test_discount_curve.cpp.s
 
 test_factory.o: test_factory.cpp.o
 .PHONY : test_factory.o
@@ -402,7 +402,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_bond"
-	@echo "... test_discount_calibration"
+	@echo "... test_discount_curve"
 	@echo "... test_factory"
 	@echo "... test_swap"
 	@echo "... test_tir"
@@ -411,9 +411,9 @@ help:
 	@echo "... test_bond.o"
 	@echo "... test_bond.i"
 	@echo "... test_bond.s"
-	@echo "... test_discount_calibration.o"
-	@echo "... test_discount_calibration.i"
-	@echo "... test_discount_calibration.s"
+	@echo "... test_discount_curve.o"
+	@echo "... test_discount_curve.i"
+	@echo "... test_discount_curve.s"
 	@echo "... test_factory.o"
 	@echo "... test_factory.i"
 	@echo "... test_factory.s"
