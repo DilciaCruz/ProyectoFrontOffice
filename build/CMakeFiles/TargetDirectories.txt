@@ -10,7 +10,6 @@
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/CMakeFiles/rebuild_cache.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_bond.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_swap.dir
-/home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_factory.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir
 /home/andreswo/Github/ProyectoFrontOffice/build/src/Instrument/test/CMakeFiles/test_tir.dir

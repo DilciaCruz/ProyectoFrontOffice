@@ -166,19 +166,6 @@ test_swap/fast:
 .PHONY : test_swap/fast
 
 #=============================================================================
-# Target rules for targets named test_factory
-
-# Build rule for target.
-test_factory: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_factory
-.PHONY : test_factory
-
-# fast build rule for target.
-test_factory/fast:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
-.PHONY : test_factory/fast
-
-#=============================================================================
 # Target rules for targets named test_zerocouponCurveSwap
 
 # Build rule for target.
@@ -242,7 +229,6 @@ help:
 	@echo "... Instrument"
 	@echo "... test_bond"
 	@echo "... test_discount_curve"
-	@echo "... test_factory"
 	@echo "... test_swap"
 	@echo "... test_tir"
 	@echo "... test_zero_coupon_discount"

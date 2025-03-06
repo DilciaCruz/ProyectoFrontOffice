@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/test_zero_coupon_discount.dir/test_zero_coupon_discount.cpp.o -o ../../../test_zero_coupon_discount  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 
+/usr/bin/c++ CMakeFiles/test_zero_coupon_discount.dir/test_zero_coupon_discount.cpp.o -o ../../../test_zero_coupon_discount  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 

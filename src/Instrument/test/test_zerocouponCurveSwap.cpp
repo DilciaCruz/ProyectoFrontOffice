@@ -1,6 +1,6 @@
 #define BOOST_TEST_MODULE ZeroCouponCurveTest
 #include <boost/test/included/unit_test.hpp>
-#include "zero_coupon_curve.hpp"
+#include "../zero_coupon_curve.hpp"
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <iostream>
 #include <iomanip>

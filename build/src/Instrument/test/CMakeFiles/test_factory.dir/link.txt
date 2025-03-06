@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_factory.dir/test_factory.cpp.o -o ../../../test_factory  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 

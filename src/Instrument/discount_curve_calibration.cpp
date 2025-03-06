@@ -5,7 +5,6 @@
 #include <stdexcept>
 #include <cmath>
 
-// Constructor actualizado
 CurveCalibrator::CurveCalibrator(const boost::gregorian::date& baseDate, 
                                 InterpolationMethod method)
     : baseDate_(baseDate), 
@@ -56,7 +55,7 @@ void CurveCalibrator::addSwap(double rate, int months, int fixedFrequency, int f
     desc.fixedFrequency = fixedFrequency;
     desc.floatingFrequency = floatingFrequency;
     desc.initialFixing = rate / 100.0;  // Usamos la misma tasa como inicial
-    desc.floatingIndex = "EURIBOR";     // Índice por defecto
+    desc.floatingIndex = "Euribor6M";     // Índice por defecto
     desc.dayCountConvention = "ACT/360";
     
     // Temporalmente usamos una curva plana hasta que tengamos la calibrada
@@ -78,7 +77,6 @@ void CurveCalibrator::addSwap(double rate, int months, int fixedFrequency, int f
               << std::endl;
 }
 
-// Método para calibrar la curva
 std::shared_ptr<ZeroCouponCurve> CurveCalibrator::calibrate() {
     std::cout << "\nIniciando calibración de curva..." << std::endl;
     
@@ -158,7 +156,7 @@ std::shared_ptr<ZeroCouponCurve> CurveCalibrator::calibrate() {
              * Donde:
              * - DF(t_i) son los factores de descuento ya calibrados
              * - S es la tasa fija del swap (como decimal)
-             * - Δt_i es el accrual para cada período (típicamente 1/frecuencia)
+             * - Δt_i es el accrual para cada período
              * - T es el vencimiento final del swap
              */
             int fixedFrequency = static_cast<int>(swap->getFixedFrequency());

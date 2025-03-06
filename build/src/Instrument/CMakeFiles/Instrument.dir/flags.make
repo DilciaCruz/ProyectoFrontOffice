@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DInstrument_EXPORTS
 
 CXX_INCLUDES = -I/home/andreswo/Github/ProyectoFrontOffice/src -I/home/andreswo/Github/ProyectoFrontOffice/src/Instrument/.
 
-CXX_FLAGS = -g -std=gnu++17 -fPIC   -std=gnu++14
+CXX_FLAGS = -std=gnu++17 -fPIC   -std=gnu++14
 

@@ -68,7 +68,10 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "charconv": "cpp",
+        "source_location": "cpp",
+        "stdfloat": "cpp"
     },
     "boost-test-adapter-robaho.tests": [
         {

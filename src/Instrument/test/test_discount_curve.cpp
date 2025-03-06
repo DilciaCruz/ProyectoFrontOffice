@@ -10,7 +10,6 @@
 #include <iostream>
 #include <iomanip>
 
-// Register the builders using the project's registration mechanism
 static FactoryRegistrator<BondBuilder> bondRegistrator;
 static FactoryRegistrator<SwapBuilder> swapRegistrator;
 
@@ -58,7 +57,10 @@ BOOST_AUTO_TEST_CASE(TestDiscountCurveCalibrationWithDepositsAndSwaps) {
     std::cout << "24m - DF: " << std::fixed << std::setprecision(6) << df24m << std::endl;
     
     // Validar los resultados (valores esperados aproximados)
-    BOOST_CHECK_CLOSE(df6m, 0.9756, 0.1);  // Aproximación para depósito 6m al 5%
+    BOOST_CHECK_CLOSE(df6m, 0.975213, 0.1);
+    BOOST_CHECK_CLOSE(df12m, 0.947135, 0.1);
+    BOOST_CHECK_CLOSE(df18m, 0.914883, 0.1);
+    BOOST_CHECK_CLOSE(df24m, 0.881016, 0.1);
 
 }
 

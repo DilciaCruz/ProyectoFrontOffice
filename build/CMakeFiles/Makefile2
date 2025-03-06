@@ -112,7 +112,6 @@ src/Instrument/clean: src/Instrument/test/clean
 # Recursive "all" directory target.
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_bond.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_swap.dir/all
-src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_factory.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
 src/Instrument/test/all: src/Instrument/test/CMakeFiles/test_tir.dir/all
@@ -126,7 +125,6 @@ src/Instrument/test/preinstall:
 # Recursive "clean" directory target.
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_bond.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_swap.dir/clean
-src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_factory.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean
 src/Instrument/test/clean: src/Instrument/test/CMakeFiles/test_tir.dir/clean
@@ -192,7 +190,7 @@ src/Instrument/test/CMakeFiles/test_bond.dir/clean:
 src/Instrument/test/CMakeFiles/test_swap.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_swap.dir/build.make src/Instrument/test/CMakeFiles/test_swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=21,22 "Built target test_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=19,20 "Built target test_swap"
 .PHONY : src/Instrument/test/CMakeFiles/test_swap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -212,39 +210,13 @@ src/Instrument/test/CMakeFiles/test_swap.dir/clean:
 .PHONY : src/Instrument/test/CMakeFiles/test_swap.dir/clean
 
 #=============================================================================
-# Target rules for target src/Instrument/test/CMakeFiles/test_factory.dir
-
-# All Build rule for target.
-src/Instrument/test/CMakeFiles/test_factory.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=19,20 "Built target test_factory"
-.PHONY : src/Instrument/test/CMakeFiles/test_factory.dir/all
-
-# Build rule for subdir invocation for target.
-src/Instrument/test/CMakeFiles/test_factory.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_factory.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles 0
-.PHONY : src/Instrument/test/CMakeFiles/test_factory.dir/rule
-
-# Convenience name for target.
-test_factory: src/Instrument/test/CMakeFiles/test_factory.dir/rule
-.PHONY : test_factory
-
-# clean rule for target.
-src/Instrument/test/CMakeFiles/test_factory.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/clean
-.PHONY : src/Instrument/test/CMakeFiles/test_factory.dir/clean
-
-#=============================================================================
 # Target rules for target src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir
 
 # All Build rule for target.
 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build.make src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=27,28 "Built target test_zerocouponCurveSwap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=25,26 "Built target test_zerocouponCurveSwap"
 .PHONY : src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -270,7 +242,7 @@ src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/clean:
 src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build.make src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=25,26 "Built target test_zero_coupon_discount"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=23,24 "Built target test_zero_coupon_discount"
 .PHONY : src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/all
 
 # Build rule for subdir invocation for target.
@@ -296,7 +268,7 @@ src/Instrument/test/CMakeFiles/test_zero_coupon_discount.dir/clean:
 src/Instrument/test/CMakeFiles/test_tir.dir/all: src/Instrument/CMakeFiles/Instrument.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_tir.dir/build.make src/Instrument/test/CMakeFiles/test_tir.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=23,24 "Built target test_tir"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andreswo/Github/ProyectoFrontOffice/build/CMakeFiles --progress-num=21,22 "Built target test_tir"
 .PHONY : src/Instrument/test/CMakeFiles/test_tir.dir/all
 
 # Build rule for subdir invocation for target.

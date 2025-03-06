@@ -55,8 +55,8 @@ BOOST_AUTO_TEST_CASE(TestBondYieldCalculation) {
     BOOST_CHECK(computedYTM > 0.04);
     BOOST_CHECK(computedYTM < 0.07);
 
-    // Comparar con el valor esperado de 6.75%
-    BOOST_CHECK_CLOSE(computedYTM * 100, 6.75, 0.1);
+    //Valor calculado en el Excel 6.875352011%
+    BOOST_CHECK_CLOSE(computedYTM * 100, 6.875352011, 0.1);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

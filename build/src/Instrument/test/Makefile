@@ -155,20 +155,6 @@ test_swap/fast:
 .PHONY : test_swap/fast
 
 # Convenience name for target.
-src/Instrument/test/CMakeFiles/test_factory.dir/rule:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_factory.dir/rule
-.PHONY : src/Instrument/test/CMakeFiles/test_factory.dir/rule
-
-# Convenience name for target.
-test_factory: src/Instrument/test/CMakeFiles/test_factory.dir/rule
-.PHONY : test_factory
-
-# fast build rule for target.
-test_factory/fast:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/build
-.PHONY : test_factory/fast
-
-# Convenience name for target.
 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule:
 	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule
 .PHONY : src/Instrument/test/CMakeFiles/test_zerocouponCurveSwap.dir/rule
@@ -271,30 +257,6 @@ test_discount_curve.s: test_discount_curve.cpp.s
 test_discount_curve.cpp.s:
 	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_discount_curve.dir/build.make src/Instrument/test/CMakeFiles/test_discount_curve.dir/test_discount_curve.cpp.s
 .PHONY : test_discount_curve.cpp.s
-
-test_factory.o: test_factory.cpp.o
-.PHONY : test_factory.o
-
-# target to build an object file
-test_factory.cpp.o:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.o
-.PHONY : test_factory.cpp.o
-
-test_factory.i: test_factory.cpp.i
-.PHONY : test_factory.i
-
-# target to preprocess a source file
-test_factory.cpp.i:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.i
-.PHONY : test_factory.cpp.i
-
-test_factory.s: test_factory.cpp.s
-.PHONY : test_factory.s
-
-# target to generate assembly for a file
-test_factory.cpp.s:
-	cd /home/andreswo/Github/ProyectoFrontOffice/build && $(MAKE) $(MAKESILENT) -f src/Instrument/test/CMakeFiles/test_factory.dir/build.make src/Instrument/test/CMakeFiles/test_factory.dir/test_factory.cpp.s
-.PHONY : test_factory.cpp.s
 
 test_swap.o: test_swap.cpp.o
 .PHONY : test_swap.o
@@ -403,7 +365,6 @@ help:
 	@echo "... test"
 	@echo "... test_bond"
 	@echo "... test_discount_curve"
-	@echo "... test_factory"
 	@echo "... test_swap"
 	@echo "... test_tir"
 	@echo "... test_zero_coupon_discount"
@@ -414,9 +375,6 @@ help:
 	@echo "... test_discount_curve.o"
 	@echo "... test_discount_curve.i"
 	@echo "... test_discount_curve.s"
-	@echo "... test_factory.o"
-	@echo "... test_factory.i"
-	@echo "... test_factory.s"
 	@echo "... test_swap.o"
 	@echo "... test_swap.i"
 	@echo "... test_swap.s"
