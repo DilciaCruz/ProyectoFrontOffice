@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/test_zerocouponCurveSwap.dir/test_zerocouponCurveSwap.cpp.o -o ../../../test_zerocouponCurveSwap  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 
+/usr/bin/c++ -g CMakeFiles/test_zerocouponCurveSwap.dir/test_zerocouponCurveSwap.cpp.o -o ../../../test_zerocouponCurveSwap  -Wl,-rpath,/home/andreswo/Github/ProyectoFrontOffice/build /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a ../../../libInstrument.so 

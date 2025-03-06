@@ -28,10 +28,10 @@ BOOST_AUTO_TEST_CASE(TestSwapPricing) {
         desc.issueDate,
         std::vector<double>{4.74, 5.00, 5.10, 5.20},
         std::vector<boost::gregorian::date>{
-            boost::gregorian::date(2016, 10, 1),
-            boost::gregorian::date(2017, 4, 1),
-            boost::gregorian::date(2017, 10, 1),
-            boost::gregorian::date(2018, 4, 1)
+            boost::gregorian::date(2016, 10, 01),
+            boost::gregorian::date(2017, 4, 01),
+            boost::gregorian::date(2017, 10, 01),
+            boost::gregorian::date(2018, 4, 01)
         }
     );
 

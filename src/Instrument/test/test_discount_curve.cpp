@@ -26,7 +26,7 @@ BOOST_AUTO_TEST_CASE(TestDiscountCurveCalibrationWithDepositsAndSwaps) {
     calibrator.addDeposit(5.0, 6);     // Depósito 6m r = 5%
     calibrator.addSwap(5.5, 12);       // Swap 12m r = 5.5%
     calibrator.addSwap(6.0, 18);       // Swap 18m r = 6%
-    calibrator.addSwap(6.4, 24);       // Swap 2y r = 6.4%
+    calibrator.addSwap(6.4, 24);       // Swap 2a r = 6.4%
     
     // Calibrar la curva
     auto curve = calibrator.calibrate();

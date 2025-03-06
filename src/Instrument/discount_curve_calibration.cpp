@@ -143,7 +143,7 @@ std::shared_ptr<ZeroCouponCurve> CurveCalibrator::calibrate() {
                       << std::fixed << std::setprecision(6) << df;
         } 
         else if (Swap* swap = dynamic_cast<Swap*>(instrument.get())) {
-                        /*
+            /*
              * CALIBRACIÓN CON SWAPS
              * =====================
              * Para un swap con tasa fija S y pagos en tiempos t_i:
@@ -236,7 +236,7 @@ std::vector<boost::gregorian::date> CurveCalibrator::buildPaymentDates(
     return dates;
 }
 
-// Método de interpolación modificado para soportar log-lineal
+
 double CurveCalibrator::interpolateDiscountFactor(
     double targetYearFraction,
     const std::vector<double>& maturities,

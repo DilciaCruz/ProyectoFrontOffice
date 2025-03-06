@@ -52,6 +52,8 @@ double Swap::price() const {
 
         if (period > 1) {
             double forwardContinuous = zeroCouponCurve_->forwardRate(previousTime, timeToPayment);
+            //std::cout << "Forward Rate: " << forwardContinuous << "\n";
+            //std::cout << "Time to Payment: " << timeToPayment << "\n";
             currentFloatingRate = fixedFrequency_ * (std::exp(forwardContinuous / fixedFrequency_) - 1);
         }
 
