@@ -39,8 +39,8 @@ double Swap::price() const {
     double pvFixed = 0.0;
     double pvFloating = 0.0;
 
-    std::cout << "Periodo | Fecha Pago | Accrual | DF | Float Rate | Fixed CF | Float CF | PV Fixed | PV Float\n";
-    std::cout << "---------------------------------------------------------------------------------------------------\n";
+    std::cout << "Periodo | Fecha Pago | dcf Flotante | dcf FIjo | DF | Forward Rate | Float Rate | Fixed CF | Float CF | PV Fixed | PV Float\n";
+    std::cout << "----------------------------------------------------------------------------------------------------------------------------------------\n";
 
     for (int period = 1; period <= static_cast<int>(maturity_ * fixedFrequency_); ++period) {
         paymentDate += boost::gregorian::months(static_cast<int>(12 / fixedFrequency_));
@@ -50,10 +50,9 @@ double Swap::price() const {
 
         double DF = zeroCouponCurve_->getDiscountFactor(timeToPayment);
 
+        double forwardContinuous = 0.0;
         if (period > 1) {
-            double forwardContinuous = zeroCouponCurve_->forwardRate(previousTime, timeToPayment);
-            //std::cout << "Forward Rate: " << forwardContinuous << "\n";
-            //std::cout << "Time to Payment: " << timeToPayment << "\n";
+            forwardContinuous = zeroCouponCurve_->forwardRate(previousTime, timeToPayment);
             currentFloatingRate = fixedFrequency_ * (std::exp(forwardContinuous / fixedFrequency_) - 1);
         }
 
@@ -64,19 +63,20 @@ double Swap::price() const {
         pvFloating += floatingCashFlow * DF;
 
         std::cout << std::setw(7) << period << " | "
-                  << paymentDate << " | "
-                  << std::fixed << std::setprecision(6) << accrual << " | "
-                  << std::fixed << std::setprecision(5) << DF << " | "
-                  << std::fixed << std::setprecision(3) << (currentFloatingRate * 100) << "% | "
-                  << std::setw(8) << std::setprecision(3) << fixedCashFlow << "M | "
-                  << std::setw(8) << std::setprecision(3) << floatingCashFlow << "M | "
-                  << std::setw(8) << std::setprecision(3) << pvFixed << "M | "
-                  << std::setw(8) << std::setprecision(3) << pvFloating << "M\n";
+                << paymentDate << " | "
+                << std::fixed << std::setprecision(6) << timeToPayment << " | "
+                << std::fixed << std::setprecision(6) << accrual << " | "
+                << std::fixed << std::setprecision(5) << DF << " | "
+                << std::fixed << std::setprecision(6) << forwardContinuous << " | "
+                << std::fixed << std::setprecision(3) << (currentFloatingRate * 100) << "% | "
+                << std::setw(8) << std::setprecision(3) << fixedCashFlow << "M | "
+                << std::setw(8) << std::setprecision(3) << floatingCashFlow << "M | "
+                << std::setw(8) << std::setprecision(3) << pvFixed << "M | "
+                << std::setw(8) << std::setprecision(3) << pvFloating << "M\n";
 
         previousPaymentDate = paymentDate;
         previousTime = timeToPayment;
     }
-
     double finalDF = zeroCouponCurve_->getDiscountFactor(maturity_);
     pvFixed += notional_ * finalDF;
     pvFloating += notional_ * finalDF;
