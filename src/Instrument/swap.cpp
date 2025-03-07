@@ -89,7 +89,7 @@ double Swap::price() const {
               << " y un valor presente flotante de: " 
               << pvFloating << "M\n";
 
-    double npv = pvFloating - pvFixed;
+    double npv = pvFixed - pvFloating;
 
     std::cout << "\n>>> Precio calculado del Swap (NPV): " << npv << "\n";
 
