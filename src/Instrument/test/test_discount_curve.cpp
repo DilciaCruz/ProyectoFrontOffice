@@ -28,20 +28,18 @@ void printCurve(const std::shared_ptr<ZeroCouponCurve>& curve,
                 const boost::gregorian::date& baseDate, 
                 const std::vector<int>& monthsAhead) {
     
-    std::cout << "\nPlazos  | Fecha       | Year Frac | DF        | Zero Rate (%)\n";
-    std::cout << "--------------------------------------------------------\n";
+    std::cout << "\nPlazos  | Fecha       | Year Frac | DF\n";
+    std::cout << "----------------------------------------\n";
 
     for (int months : monthsAhead) {
         boost::gregorian::date futureDate = baseDate + boost::gregorian::months(months);
         double yf = curve->computeYearFraction(baseDate, futureDate);
         double df = curve->getDiscountFactor(yf);
-        double rate = -std::log(df) / yf * 100; // Convertir a tasa en %
         
         std::cout << std::setw(7) << std::left << std::to_string(months) + "m" << "| "
                   << formatDate(futureDate) << " | "
                   << std::fixed << std::setprecision(6) << std::setw(9) << yf << " | "
-                  << std::setw(9) << df << " | "
-                  << std::setw(9) << rate << "\n";
+                  << std::setw(9) << df << "\n";
     }
     std::cout << std::endl;
 }
